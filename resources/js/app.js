@@ -32,7 +32,10 @@ Vue.component('home', require('./Home.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import router from './Router/router.js'
+
 const app = new Vue({
     el: '#app',
-    vuetify: new Vuetify()
+    vuetify: new Vuetify(),
+    router
 });
