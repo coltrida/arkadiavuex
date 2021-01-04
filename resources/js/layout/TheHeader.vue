@@ -2,11 +2,15 @@
     <v-card
             color="indigo"
     >
-        <v-toolbar color="indigo darken-4"
+        <v-toolbar color="blue-grey darken-3"
                    dark>
 
             <router-link to="/">
-                <v-toolbar-title >Arkadia</v-toolbar-title>
+                <v-toolbar-title >
+                    <v-btn text>
+                    Arkadia
+                </v-btn>
+                </v-toolbar-title>
             </router-link>
             <v-spacer></v-spacer>
 

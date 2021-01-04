@@ -17,5 +17,5 @@
 </script>
 
 <style scoped>
-*{background-color: #78909C}
+*{background-color: #263238}
 </style>
