@@ -1,5 +1,6 @@
 <template>
-    <v-footer padless>
+    <v-footer padless color="indigo darken-4"
+              dark style="margin-top: 50px">
         <v-col
                 class="text-center"
                 cols="12"

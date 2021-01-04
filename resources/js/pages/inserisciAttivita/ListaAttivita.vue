@@ -1,10 +1,10 @@
 <template>
-    <v-parallax height="700" src="/img/home.jpg"></v-parallax>
+    
 </template>
 
 <script>
     export default {
-        name: "NotLogged"
+        name: "ListaAttivita"
     }
 </script>
 

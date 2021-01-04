@@ -1,12 +1,23 @@
 <template>
-    <div>
-        <h2>Home</h2>
+    <div style="margin-top: 40px">
+        <not-logged v-if="!isLogged"></not-logged>
+        <logged v-else></logged>
     </div>
 </template>
 
 <script>
+    import NotLogged from './NotLogged'
+    import Logged from './Logged'
     export default {
-        name: "HomePage"
+        name: "HomePage",
+
+        components: { NotLogged, Logged },
+
+        data(){
+            return{
+                isLogged: true
+            }
+        }
     }
 </script>
 

@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homevuex');
-});
+//Route::get('/', function () {
+//    return view('homevuex');
+//});
 
-Auth::routes();
+Route::view('/', 'homevuex');
+Route::view('/{any}', 'homevuex');
+// e anche un secondo livello di rotta per il metodo show ad esempio
+Route::view('/{any}/{any1}', 'homevuex');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/*Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/

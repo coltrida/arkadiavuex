@@ -2,20 +2,26 @@
     <v-card
             color="indigo"
     >
-        <v-toolbar color="indigo"
+        <v-toolbar color="indigo darken-4"
                    dark>
 
-            <v-toolbar-title>Arkadia</v-toolbar-title>
-
+            <router-link to="/">
+                <v-toolbar-title >Arkadia</v-toolbar-title>
+            </router-link>
             <v-spacer></v-spacer>
 
-            <v-btn text>
-                Login
-            </v-btn>
+            <router-link to="/login">
+                <v-btn text>
+                    Login
+                </v-btn>
+            </router-link>
 
-            <v-btn text>
-                Registrati
-            </v-btn>
+            <router-link to="/register">
+                <v-btn text>
+                    Registrati
+                </v-btn>
+            </router-link>
+
         </v-toolbar>
     </v-card>
 </template>
