@@ -4,13 +4,10 @@
             <thead>
             <tr style="background-color: #2e4623">
                 <th class="text-left">
-                    Nome Attività
+                    Giorno
                 </th>
                 <th class="text-left">
-                    Tipo
-                </th>
-                <th class="text-left">
-                    Costo
+                    Ore
                 </th>
                 <th class="text-left">
 
@@ -19,14 +16,13 @@
             </thead>
             <tbody>
             <tr
-                    v-for="(item, index) in attivita"
+                    v-for="(item, index) in presenze"
                     :key="item.id"
             >
-                <td>{{ item.name }}</td>
-                <td>{{ item.tipo }}</td>
-                <td>{{ item.costo }}</td>
+                <td>{{ item.giorno }}</td>
+                <td>{{ item.ore }}</td>
                 <td>
-                    <v-btn @click="delAttivita(item.id, index)" color="red">
+                    <v-btn @click="delPresenza(item.id, index)" color="red">
                         <v-icon>mdi-delete</v-icon>
                     </v-btn>
                 </td>
@@ -38,26 +34,26 @@
 
 <script>
     export default {
-        name: "ListaAttivita",
+        name: "ListaPresenze",
 
         created() {
-            this.loadAttivita();
+            this.loadPresenze();
         },
 
         computed:{
-            attivita(){
-                return this.$store.getters['attivita/attivita']
+            presenze(){
+                return this.$store.getters['operatori/presenze']
             }
 
         },
 
         methods: {
-            loadAttivita(){
-                this.$store.dispatch('attivita/loadattivita')
+            loadPresenze(){
+                this.$store.dispatch('operatori/loadpresenze', 1)
             },
 
-            delAttivita(id, indice){
-                this.$store.dispatch('attivita/eliminaattivita', {
+            delPresenza(id, indice){
+                this.$store.dispatch('operatori/eliminapresenza', {
                     id: id,
                     indice: indice
                 })

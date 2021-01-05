@@ -4,13 +4,7 @@
             <thead>
             <tr style="background-color: #2e4623">
                 <th class="text-left">
-                    Nome Attività
-                </th>
-                <th class="text-left">
-                    Tipo
-                </th>
-                <th class="text-left">
-                    Costo
+                    Nome Ragazzo
                 </th>
                 <th class="text-left">
 
@@ -19,14 +13,12 @@
             </thead>
             <tbody>
             <tr
-                    v-for="(item, index) in attivita"
+                    v-for="(item, index) in vetture"
                     :key="item.id"
             >
                 <td>{{ item.name }}</td>
-                <td>{{ item.tipo }}</td>
-                <td>{{ item.costo }}</td>
                 <td>
-                    <v-btn @click="delAttivita(item.id, index)" color="red">
+                    <v-btn @click="delVettura(item.id, index)" color="red">
                         <v-icon>mdi-delete</v-icon>
                     </v-btn>
                 </td>
@@ -38,26 +30,26 @@
 
 <script>
     export default {
-        name: "ListaAttivita",
+        name: "ListaVetture",
 
         created() {
-            this.loadAttivita();
+            this.loadVetture();
         },
 
         computed:{
-            attivita(){
-                return this.$store.getters['attivita/attivita']
+            vetture(){
+                return this.$store.getters['vetture/vetture']
             }
 
         },
 
         methods: {
-            loadAttivita(){
-                this.$store.dispatch('attivita/loadattivita')
+            loadVetture(){
+                this.$store.dispatch('vetture/loadvetture')
             },
 
-            delAttivita(id, indice){
-                this.$store.dispatch('attivita/eliminaattivita', {
+            delVettura(id, indice){
+                this.$store.dispatch('vetture/eliminavettura', {
                     id: id,
                     indice: indice
                 })

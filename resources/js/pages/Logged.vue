@@ -10,6 +10,7 @@
                 >
                     <v-item v-slot="{ active, toggle }">
                         <v-hover v-slot="{ hover }">
+                            <router-link :to="item.to">
                         <v-card
                                 class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
                                 height="200"
@@ -26,6 +27,7 @@
                                 </div>
                             </v-scroll-y-transition>
                         </v-card>
+                            </router-link>
                         </v-hover>
                     </v-item>
                 </v-col>

@@ -1,24 +1,7 @@
 <template>
     <v-container>
-        <h3 style="color: white">Inserisci Ragazzo</h3>
+        <h3 style="color: white">Inserisci Presenze</h3>
         <v-form @submit.prevent="inserisci">
-            <v-text-field
-                    v-model="form.name"
-                    label="Ragazzo"
-                    type="text"
-                    required
-                    dark
-            ></v-text-field>
-
-            <v-text-field
-                    v-model="form.voucher"
-                    label="voucher"
-                    type="number"
-                    step="0.5"
-                    required
-                    dark
-            ></v-text-field>
-
             <v-menu
                     v-model="menu2"
                     :close-on-content-click="false"
@@ -29,8 +12,8 @@
             >
                 <template v-slot:activator="{ on, attrs }">
                     <v-text-field
-                            v-model="form.scadenza"
-                            label="Scandeza Voucher"
+                            v-model="form.giorno"
+                            label="Giorno"
                             prepend-icon="mdi-calendar"
                             readonly
                             v-bind="attrs"
@@ -39,12 +22,21 @@
                     ></v-text-field>
                 </template>
                 <v-date-picker
-                        v-model="form.scadenza"
+                        v-model="form.giorno"
                         @input="menu2 = false"
                         locale="it"
                         :first-day-of-week="1"
                 ></v-date-picker>
             </v-menu>
+
+            <v-text-field
+                    v-model="form.ore"
+                    label="Ore"
+                    type="number"
+                    step="0.5"
+                    required
+                    dark
+            ></v-text-field>
 
             <v-btn
                     color="green"
@@ -54,45 +46,42 @@
 
         </v-form>
 
-        <lista-ragazzi style="margin-top:40px"></lista-ragazzi>
+        <lista-presenze style="margin-top:40px"></lista-presenze>
 
     </v-container>
 </template>
 
 <script>
-    import ListaRagazzi from './ListaRagazzi'
+    import ListaPresenze from './ListaPresenze'
     export default {
         name: "Index",
 
         components: {
-            ListaRagazzi,
+            ListaPresenze,
         },
 
         data(){
             return {
-                tipi: ['Mensile', 'Giornaliero'],
-
                 menu2: false,
                 form: {
-                    name: '',
-                    voucher: '',
-                    scadenza: '',
+                    id: 1,
+                    giorno: '',
+                    ore: '',
                 }
             }
         },
 
         computed:{
             canSend(){
-                return !(this.form.name && this.form.voucher)
+                return !(this.form.giorno && this.form.ore)
             }
         },
 
         methods: {
             inserisci(){
-                this.$store.dispatch('ragazzi/inserisciragazzo', this.form).then(() => {
-                    this.form.name = '';
-                    this.form.voucher = '';
-                    this.form.scadenza = '';
+                this.$store.dispatch('operatori/inseriscipresenza', this.form).then(() => {
+                    this.form.giorno = '';
+                    this.form.ore = '';
                 })
 
             }
@@ -103,3 +92,4 @@
 <style scoped>
 
 </style>
+
