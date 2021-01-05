@@ -6,13 +6,23 @@
                    dark>
 
             <router-link to="/">
-                <v-toolbar-title >
+                <v-toolbar-title>
                     <v-btn text>
-                    Arkadia
-                </v-btn>
+                        Arkadia
+                    </v-btn>
                 </v-toolbar-title>
             </router-link>
             <v-spacer></v-spacer>
+
+            <v-chip
+                    pill
+                    v-on="on"
+            >
+                <v-avatar left>
+                    <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
+                </v-avatar>
+                John Leider
+            </v-chip>
 
             <router-link to="/login">
                 <v-btn text>

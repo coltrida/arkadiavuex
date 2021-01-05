@@ -10,6 +10,11 @@ import Attivita from "../pages/inserisciAttivita/Index";
 import Ragazzo from "../pages/inserisciRagazzo/Index";
 import Vettura from "../pages/inserisciVettura/Index";
 import PresenzeOperatore from "../pages/presenzeOperatore/Index";
+import PresenzeAttivita from "../pages/presenzeAttivita/Index";
+import Associa from "../pages/associa/Index";
+const AssociaAttivitaRagazzo = () => import('../pages/associa/attivitaragazzo/Index');
+const AssociaOperatoreOre = () => import('../pages/associa/operatoreore/Index');
+const Log = () => import('../pages/associa/log/Index');
 
 const routes = [
     { path: '/', component: HomePage },
@@ -19,6 +24,11 @@ const routes = [
     { path: '/inserisciragazzo', component: Ragazzo },
     { path: '/inseriscivettura', component: Vettura },
     { path: '/presenzeoperatori', component: PresenzeOperatore },
+    { path: '/attivitaragazzi', component: PresenzeAttivita },
+    { path: '/associa', component: Associa },
+    { path: '/associaattivitaragazzo', component: AssociaAttivitaRagazzo },
+    { path: '/associaoreoperatore', component: AssociaOperatoreOre },
+    { path: '/log', component: Log },
     { path: '/:notFound(.*)', component: HomePage }
 ]
 

@@ -57,23 +57,9 @@
       <change beforePath="$PROJECT_DIR$/../vocechiara/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vocechiara/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vocechiara/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vocechiara/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vocechiara/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../vocechiara/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Router/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Router/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/Logged.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Logged.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/inserisciAttivita/ListaAttivita.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/inserisciAttivita/ListaAttivita.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/inserisciRagazzo/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/inserisciRagazzo/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/inserisciRagazzo/ListaRagazzi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/inserisciRagazzo/ListaRagazzi.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/homevuex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homevuex.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/layout/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layout/TheHeader.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/Router/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+            <state relative-caret-position="266">
+              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#78#119#0" expanded="true" />
@@ -103,73 +89,41 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/index.js">
+        <entry file="file://$PROJECT_DIR$/resources/js/pages/associa/attivitaragazzo/Index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="20" />
+            <state relative-caret-position="170">
+              <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="n#v-select#0;n#v-form#0;n#v-container#0;n#template#0;n#!!top" />
+                <element signature="n#v-autocomplete#0;n#v-form#0;n#v-container#0;n#template#0;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/actions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="47" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/mutations.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/getters.js">
+        <entry file="file://$PROJECT_DIR$/resources/js/layout/TheHeader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="340">
+              <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/pages/presenzeOperatore/ListaPresenze.vue">
+        <entry file="file://$PROJECT_DIR$/resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-              <folding>
-                <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/index.js">
+        <entry file="file://$PROJECT_DIR$/resources/js/pages/presenzeAttivita/Index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="31" column="17" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/attivita/mutations.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="12" selection-end-column="2" />
+            <state relative-caret-position="1938">
+              <caret line="199" selection-start-line="106" selection-start-column="3" selection-end-line="199" />
             </state>
           </provider>
         </entry>
@@ -181,8 +135,8 @@
       <list>
         <option value="blade" />
         <option value="TypeScript File" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -193,6 +147,9 @@
       <find>modal</find>
       <find>date</find>
       <find>presenze</find>
+      <find>listaattivita</find>
+      <find>loadRa</find>
+      <find>people</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -224,7 +181,6 @@
         <option value="$PROJECT_DIR$/resources/js/store/modules/attivita/actions.js" />
         <option value="$PROJECT_DIR$/resources/js/Home.vue" />
         <option value="$PROJECT_DIR$/resources/js/layout/TheFooter.vue" />
-        <option value="$PROJECT_DIR$/resources/js/layout/TheHeader.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/inserisciAttivita/index.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/inserisciAttivita/Index.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/inserisciAttivita/ListaAttivita.vue" />
@@ -240,15 +196,23 @@
         <option value="$PROJECT_DIR$/resources/js/pages/Logged.vue" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/vetture/actions.js" />
         <option value="$PROJECT_DIR$/resources/js/pages/inserisciRagazzo/Index.vue" />
-        <option value="$PROJECT_DIR$/resources/js/Router/router.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/operatori/index.js" />
         <option value="$PROJECT_DIR$/resources/js/store/index.js" />
-        <option value="$PROJECT_DIR$/resources/js/pages/presenzeOperatore/ListaPresenze.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/presenzeOperatore/Index.vue" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/operatori/actions.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/ragazzi/mutations.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/operatori/mutations.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/operatori/getters.js" />
+        <option value="$PROJECT_DIR$/resources/js/pages/presenzeOperatore/ListaPresenze.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/presenzeAttivita/ListaPresenze.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/presenzeAttivita/Index.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/associa/Index.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/associa/log/Index.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/associa/operatoreore/Index.vue" />
+        <option value="$PROJECT_DIR$/resources/js/Router/router.js" />
+        <option value="$PROJECT_DIR$/resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/associa/attivitaragazzo/Index.vue" />
+        <option value="$PROJECT_DIR$/resources/js/layout/TheHeader.vue" />
       </list>
     </option>
   </component>
@@ -418,7 +382,7 @@
               <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
@@ -426,40 +390,38 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="presenzeOperatore" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
               <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="associa" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
               <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="associa" type="462c0819:PsiDirectoryNode" />
+              <item name="attivitaragazzo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
               <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="attivita" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="presenzeAttivita" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
               <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="operatori" type="462c0819:PsiDirectoryNode" />
+              <item name="Router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -471,7 +433,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/store/modules/operatori" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../VUE/findTheCoach" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -516,12 +478,12 @@
       <updated>1609713461580</updated>
       <workItem from="1609713462738" duration="4586000" />
       <workItem from="1609752162105" duration="3332000" />
-      <workItem from="1609839980046" duration="9082000" />
+      <workItem from="1609839980046" duration="18433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40883000" />
+    <option name="totallyTimeSpent" value="50234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -542,7 +504,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22765364" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17318435" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -555,35 +517,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" />
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.mix.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding>
-            <element signature="e#498244#498379#1" expanded="true" />
-            <element signature="e#498584#498719#1" expanded="true" />
-            <element signature="e#507977#508112#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -609,13 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="280" column="9" selection-start-line="280" selection-start-column="9" selection-end-line="280" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/NotLogged.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -688,37 +614,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/layout/TheHeader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciAttivita/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="941">
-          <caret line="83" selection-start-line="44" selection-start-column="21" selection-end-line="83" />
-          <folding>
-            <element signature="n#style#0;n#lista-attivita#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciAttivita/ListaAttivita.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -756,13 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/ragazzi/getters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/store/modules/vetture/mutations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -781,30 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/Logged.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="71" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciRagazzo/ListaRagazzi.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="72" selection-start-line="40" selection-start-column="28" selection-end-line="72" />
-          <folding>
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciRagazzo/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="46" column="21" selection-end-line="105" />
         </state>
       </provider>
     </entry>
@@ -829,17 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/Router/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#78#119#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -912,20 +769,152 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/getters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/pages/presenzeOperatore/ListaPresenze.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        <state relative-caret-position="408">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/getters.js">
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/NotLogged.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/ragazzi/getters.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciRagazzo/ListaRagazzi.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="55" column="57" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/presenzeAttivita/ListaPresenze.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciRagazzo/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="21" selection-start-line="21" selection-end-line="46" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/Logged.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" selection-start-line="73" selection-start-column="22" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciAttivita/ListaAttivita.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciAttivita/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#lista-attivita#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/associa/log/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/associa/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="46" column="90" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="90" />
+          <folding>
+            <element signature="n#style#0;n#v-item-group#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/associa/operatoreore/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/Router/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#78#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/presenzeAttivita/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="199" selection-start-line="106" selection-start-column="3" selection-end-line="199" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/associa/attivitaragazzo/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+          <folding>
+            <element signature="n#v-select#0;n#v-form#0;n#v-container#0;n#template#0;n#!!top" />
+            <element signature="n#v-autocomplete#0;n#v-form#0;n#v-container#0;n#template#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/layout/TheHeader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
         </state>
       </provider>
     </entry>
