@@ -16,7 +16,6 @@
 
             <v-chip
                     pill
-                    v-on="on"
             >
                 <v-avatar left>
                     <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>

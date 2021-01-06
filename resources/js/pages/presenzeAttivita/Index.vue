@@ -3,13 +3,15 @@
         <h3 style="color: white">Inserisci Dati</h3>
         <v-form @submit.prevent="inserisci">
             <v-select
-                v-model="form.attivita"
-                @change="attivitaSelezionata"
-                :items="listaattivita"
-                item-text="name"
-                label="Attività"
-                dark
-        ></v-select>
+                    v-model="form.attivita"
+                    :items="listaattivita"
+                    item-text="name"
+                    item-value="id"
+                    label="Attività"
+                    dark
+                    return-object
+                    @change="attivitaSelezionata(form.attivita.id, form.attivita.tipo)"
+            ></v-select>
 
             <v-autocomplete
                     v-model="form.ragazzi"
@@ -18,11 +20,10 @@
                     filled
                     chips
                     color="blue-grey lighten-2"
-                    label="Select"
+                    label="Ragazzi"
                     item-text="name"
-                    item-value="name"
+                    item-value="id"
                     multiple
-                    dark
             >
                 <template v-slot:selection="data">
                     <v-chip
@@ -86,6 +87,7 @@
                     label="Quantità"
                     type="number"
                     step="0.5"
+                    :readonly="!abilitaqta"
                     required
                     dark
             ></v-text-field>
@@ -93,8 +95,9 @@
             <v-btn
                     color="green"
                     type="submit"
-                    :disabled = "canSend"
-            >Inserisci</v-btn>
+                    :disabled="canSend"
+            >Inserisci
+            </v-btn>
 
         </v-form>
 
@@ -105,6 +108,7 @@
 
 <script>
     import ListaPresenze from './ListaPresenze'
+
     export default {
         name: "index",
 
@@ -117,7 +121,7 @@
             this.loadRagazzi();
         },
 
-        data(){
+        data() {
             const srcs = {
                 1: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
                 2: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
@@ -127,6 +131,7 @@
             }
 
             return {
+                abilitaqta: false,
                 autoUpdate: true,
                 friends: [],
                 menu2: false,
@@ -134,7 +139,7 @@
                 form: {
                     attivita: '',
                     giorno: '',
-                    quantita: '',
+                    quantita: '1',
                     ragazzi: []
                 },
                 name: 'Midnight Crew',
@@ -148,47 +153,71 @@
                     { name: 'John Smith', group: 'Group 2', avatar: srcs[1] },
                     { name: 'Sandra Williams', group: 'Group 2', avatar: srcs[3] },
                 ],*/
-                title: 'The summer breeze',
+                title: 'The summer breezed',
 
             }
         },
 
-        computed:{
-            canSend(){
-                return !(this.form.name && this.form.costo && this.form.tipo)
+        computed: {
+            canSend() {
+                return !(this.form.attivita && this.form.giorno && this.form.quantita && this.form.ragazzi.length)
             },
-            listaattivita(){
+            listaattivita() {
                 return this.$store.getters['attivita/attivita']
             },
-            people(){
+            people() {
                 return this.$store.getters['ragazzi/ragazzi']
+            },
+            ragazziselezionati() {
+                return this.$store.getters['associa/associazioniselezionati']
+            }
+        },
+
+        watch: {
+            ragazziselezionati(value) {
+                this.form.ragazzi = value;
+                return value
             }
         },
 
         methods: {
-            inserisci(){
-                this.$store.dispatch('attivita/inserisciattivita', this.form).then(() => {
-                    this.form.name = '';
-                    this.form.costo = '';
-                    this.form.tipo = '';
+            inserisci() {
+                //console.log(this.form)
+                this.$store.dispatch('ragazzi/inserisciattivita', {
+                    attivita: this.form.attivita.id,
+                    costo: this.form.attivita.costo,
+                    giorno: this.form.giorno,
+                    quantita: this.form.quantita,
+                    ragazzi: this.form.ragazzi
+                }).then(() => {
+                    this.form.attivita = '';
+                    this.form.giorno = '';
+                    this.form.quantita = '1';
+                    this.form.ragazzi = [];
                 })
             },
 
-            loadAttivita(){
+            loadAttivita() {
                 this.$store.dispatch('attivita/loadattivita')
             },
 
-            loadRagazzi(){
+            loadRagazzi() {
                 this.$store.dispatch('ragazzi/loadragazzi')
             },
 
-            remove (item) {
-                const index = this.friends.indexOf(item.name)
-                if (index >= 0) this.friends.splice(index, 1)
+            remove(item) {
+                const index = this.form.ragazzi.indexOf(item.id)
+                if (index >= 0) this.form.ragazzi.splice(index, 1)
             },
 
-            attivitaSelezionata(){
-                alert('ciao')
+            attivitaSelezionata(id, tipo) {
+                if(tipo == 'mensile'){
+                    this.abilitaqta = false
+                }else{
+                    this.abilitaqta = true
+                }
+                this.form.ragazzi = [];
+                this.$store.dispatch('associa/estrapolaassociazioneragazzi', id)
             }
         }
     }

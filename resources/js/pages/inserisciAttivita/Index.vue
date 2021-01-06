@@ -50,7 +50,7 @@
 
         data(){
             return {
-                tipi: ['Mensile', 'Giornaliero'],
+                tipi: ['Mensile', 'Orario'],
                 form: {
                     name: '',
                     costo: '',

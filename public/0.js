@@ -79,7 +79,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "index",
@@ -100,13 +99,10 @@ __webpack_require__.r(__webpack_exports__);
     };
     return {
       autoUpdate: true,
-      friends: [],
       menu2: false,
       isUpdating: false,
       form: {
         attivita: '',
-        giorno: '',
-        quantita: '',
         ragazzi: []
       },
       name: 'Midnight Crew',
@@ -126,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     canSend: function canSend() {
-      return !(this.form.name && this.form.costo && this.form.tipo);
+      return !(this.form.attivita && this.form.ragazzi.length);
     },
     listaattivita: function listaattivita() {
       return this.$store.getters['attivita/attivita'];
@@ -139,10 +135,9 @@ __webpack_require__.r(__webpack_exports__);
     inserisci: function inserisci() {
       var _this = this;
 
-      this.$store.dispatch('attivita/inserisciattivita', this.form).then(function () {
-        _this.form.name = '';
-        _this.form.costo = '';
-        _this.form.tipo = '';
+      this.$store.dispatch('associa/inserisciassociazione', this.form).then(function () {
+        _this.form.attivita = '';
+        _this.form.ragazzi = [];
       });
     },
     loadAttivita: function loadAttivita() {
@@ -152,8 +147,8 @@ __webpack_require__.r(__webpack_exports__);
       this.$store.dispatch('ragazzi/loadragazzi');
     },
     remove: function remove(item) {
-      var index = this.friends.indexOf(item.name);
-      if (index >= 0) this.friends.splice(index, 1);
+      var index = this.form.ragazzi.indexOf(item.id);
+      if (index >= 0) this.form.ragazzi.splice(index, 1);
     }
   }
 });
@@ -173,8 +168,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "ListaAssociazioni"
+  name: "ListaAssociazioni",
+  created: function created() {
+    this.loadAssociazioni();
+  },
+  computed: {
+    associazioni: function associazioni() {
+      return this.$store.getters['associa/associazioni'];
+    }
+  },
+  methods: {
+    loadAssociazioni: function loadAssociazioni() {
+      this.$store.dispatch('associa/loadassociazioni');
+    },
+    delAssociazione: function delAssociazione(id, indice) {
+      this.$store.dispatch('associa/eliminaassociazione', {
+        id: id,
+        indice: indice
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -216,6 +260,7 @@ var render = function() {
             attrs: {
               items: _vm.listaattivita,
               "item-text": "name",
+              "item-value": "id",
               label: "Attività",
               dark: ""
             },
@@ -235,11 +280,10 @@ var render = function() {
               filled: "",
               chips: "",
               color: "blue-grey lighten-2",
-              label: "Select",
+              label: "Ragazzi",
               "item-text": "name",
-              "item-value": "name",
-              multiple: "",
-              dark: ""
+              "item-value": "id",
+              multiple: ""
             },
             scopedSlots: _vm._u([
               {
@@ -360,7 +404,64 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("v-simple-table", {
+    attrs: { dark: "" },
+    scopedSlots: _vm._u([
+      {
+        key: "default",
+        fn: function() {
+          return [
+            _c("thead", [
+              _c("tr", { staticStyle: { "background-color": "#2e4623" } }, [
+                _c("th", { staticClass: "text-left" }, [
+                  _vm._v("\n                Attivita'\n            ")
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-left" }, [
+                  _vm._v("\n                Ragazzo\n            ")
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-left" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.associazioni, function(item, index) {
+                return _c("tr", { key: item.id }, [
+                  _c("td", [_vm._v(_vm._s(item.attivita))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.ragazzo))]),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { color: "red" },
+                          on: {
+                            click: function($event) {
+                              return _vm.delAssociazione(item.id, index)
+                            }
+                          }
+                        },
+                        [_c("v-icon", [_vm._v("mdi-delete")])],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ])
+              }),
+              0
+            )
+          ]
+        },
+        proxy: true
+      }
+    ])
+  })
 }
 var staticRenderFns = []
 render._withStripped = true

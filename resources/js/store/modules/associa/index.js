@@ -6,8 +6,8 @@ export default {
     namespaced: true,
     state() {
         return {
-            ragazzi: [],
-            attivita: []
+            attivitaragazzi: [],
+            attivitaragazziselezionati: []
         };
     },
     mutations,

@@ -6,6 +6,7 @@
                     v-model="form.attivita"
                     :items="listaattivita"
                     item-text="name"
+                    item-value="id"
                     label="Attività"
                     dark
             ></v-select>
@@ -17,11 +18,10 @@
                     filled
                     chips
                     color="blue-grey lighten-2"
-                    label="Select"
+                    label="Ragazzi"
                     item-text="name"
-                    item-value="name"
+                    item-value="id"
                     multiple
-                    dark
             >
                 <template v-slot:selection="data">
                     <v-chip
@@ -52,7 +52,6 @@
                     </template>
                 </template>
             </v-autocomplete>
-
 
             <v-btn
                     color="green"
@@ -94,13 +93,10 @@
 
             return {
                 autoUpdate: true,
-                friends: [],
                 menu2: false,
                 isUpdating: false,
                 form: {
                     attivita: '',
-                    giorno: '',
-                    quantita: '',
                     ragazzi: []
                 },
                 name: 'Midnight Crew',
@@ -121,7 +117,7 @@
 
         computed: {
             canSend() {
-                return !(this.form.name && this.form.costo && this.form.tipo)
+                return !(this.form.attivita && this.form.ragazzi.length)
             },
             listaattivita() {
                 return this.$store.getters['attivita/attivita']
@@ -133,10 +129,9 @@
 
         methods: {
             inserisci() {
-                this.$store.dispatch('attivita/inserisciattivita', this.form).then(() => {
-                    this.form.name = '';
-                    this.form.costo = '';
-                    this.form.tipo = '';
+                this.$store.dispatch('associa/inserisciassociazione', this.form).then(() => {
+                    this.form.attivita = '';
+                    this.form.ragazzi = [];
                 })
             },
 
@@ -148,9 +143,9 @@
                 this.$store.dispatch('ragazzi/loadragazzi')
             },
 
-            remove(item) {
-                const index = this.friends.indexOf(item.name)
-                if (index >= 0) this.friends.splice(index, 1)
+            remove (item) {
+                const index = this.form.ragazzi.indexOf(item.id)
+                if (index >= 0) this.form.ragazzi.splice(index, 1)
             },
 
         }

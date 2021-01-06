@@ -6,6 +6,7 @@ import attivita from './modules/attivita'
 import ragazzi from './modules/ragazzi'
 import vetture from './modules/vetture'
 import operatori from './modules/operatori'
+import associa from './modules/associa'
 
 Vue.use(Vuex);
 
@@ -29,6 +30,7 @@ export default new Vuex.Store({
         attivita,
         ragazzi,
         vetture,
-        operatori
+        operatori,
+        associa
     }
 })

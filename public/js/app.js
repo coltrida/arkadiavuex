@@ -2034,6 +2034,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2082,7 +2084,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -2533,7 +2534,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      tipi: ['Mensile', 'Giornaliero'],
+      tipi: ['Mensile', 'Orario'],
       form: {
         name: '',
         costo: '',
@@ -3058,6 +3059,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "index",
@@ -3077,6 +3081,7 @@ __webpack_require__.r(__webpack_exports__);
       5: 'https://cdn.vuetifyjs.com/images/lists/5.jpg'
     };
     return {
+      abilitaqta: false,
       autoUpdate: true,
       friends: [],
       menu2: false,
@@ -3084,7 +3089,7 @@ __webpack_require__.r(__webpack_exports__);
       form: {
         attivita: '',
         giorno: '',
-        quantita: '',
+        quantita: '1',
         ragazzi: []
       },
       name: 'Midnight Crew',
@@ -3099,28 +3104,45 @@ __webpack_require__.r(__webpack_exports__);
           { name: 'John Smith', group: 'Group 2', avatar: srcs[1] },
           { name: 'Sandra Williams', group: 'Group 2', avatar: srcs[3] },
       ],*/
-      title: 'The summer breeze'
+      title: 'The summer breezed'
     };
   },
   computed: {
     canSend: function canSend() {
-      return !(this.form.name && this.form.costo && this.form.tipo);
+      return !(this.form.attivita && this.form.giorno && this.form.quantita && this.form.ragazzi.length);
     },
     listaattivita: function listaattivita() {
       return this.$store.getters['attivita/attivita'];
     },
     people: function people() {
       return this.$store.getters['ragazzi/ragazzi'];
+    },
+    ragazziselezionati: function ragazziselezionati() {
+      return this.$store.getters['associa/associazioniselezionati'];
+    }
+  },
+  watch: {
+    ragazziselezionati: function ragazziselezionati(value) {
+      this.form.ragazzi = value;
+      return value;
     }
   },
   methods: {
     inserisci: function inserisci() {
       var _this = this;
 
-      this.$store.dispatch('attivita/inserisciattivita', this.form).then(function () {
-        _this.form.name = '';
-        _this.form.costo = '';
-        _this.form.tipo = '';
+      //console.log(this.form)
+      this.$store.dispatch('ragazzi/inserisciattivita', {
+        attivita: this.form.attivita.id,
+        costo: this.form.attivita.costo,
+        giorno: this.form.giorno,
+        quantita: this.form.quantita,
+        ragazzi: this.form.ragazzi
+      }).then(function () {
+        _this.form.attivita = '';
+        _this.form.giorno = '';
+        _this.form.quantita = '1';
+        _this.form.ragazzi = [];
       });
     },
     loadAttivita: function loadAttivita() {
@@ -3130,11 +3152,18 @@ __webpack_require__.r(__webpack_exports__);
       this.$store.dispatch('ragazzi/loadragazzi');
     },
     remove: function remove(item) {
-      var index = this.friends.indexOf(item.name);
-      if (index >= 0) this.friends.splice(index, 1);
+      var index = this.form.ragazzi.indexOf(item.id);
+      if (index >= 0) this.form.ragazzi.splice(index, 1);
     },
-    attivitaSelezionata: function attivitaSelezionata() {
-      alert('ciao');
+    attivitaSelezionata: function attivitaSelezionata(id, tipo) {
+      if (tipo == 'mensile') {
+        this.abilitaqta = false;
+      } else {
+        this.abilitaqta = true;
+      }
+
+      this.form.ragazzi = [];
+      this.$store.dispatch('associa/estrapolaassociazioneragazzi', id);
     }
   }
 });
@@ -3154,8 +3183,65 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "ListaPresenze"
+  name: "ListaPresenze",
+  created: function created() {
+    this.loadAttivita();
+  },
+  computed: {
+    dati: function dati() {
+      return this.$store.getters['ragazzi/attivita'];
+    }
+  },
+  methods: {
+    loadAttivita: function loadAttivita() {
+      this.$store.dispatch('ragazzi/loadattivita');
+    },
+    delAttivita: function delAttivita(id, indice) {
+      this.$store.dispatch('ragazzi/eliminaattivita', {
+        id: id,
+        indice: indice
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -7766,7 +7852,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n*[data-v-35a92206]{background-color: #263238}\r\n", ""]);
+exports.push([module.i, "\n*[data-v-35a92206]{\r\n    background-color: #263238\n}\n.route-enter-from[data-v-35a92206] {\r\n    opacity: 0;\n}\n.route-leave-to[data-v-35a92206] {\r\n    opacity: 0;\n}\n.route-enter-active[data-v-35a92206] {\r\n    transition: all 0.4s ease-out;\n}\n.route-leave-active[data-v-35a92206] {\r\n    transition: all 0.4s ease-in;\n}\n.route-enter-to[data-v-35a92206],\r\n.route-leave-from[data-v-35a92206] {\r\n    opacity: 1;\n}\r\n", ""]);
 
 // exports
 
@@ -39664,7 +39750,12 @@ var render = function() {
     [
       _c("the-header"),
       _vm._v(" "),
-      _c("router-view"),
+      _c(
+        "transition",
+        { attrs: { name: "route", mode: "out-in" } },
+        [_c("router-view")],
+        1
+      ),
       _vm._v(" "),
       _c("the-footer")
     ],
@@ -39759,7 +39850,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "v-chip",
-            _vm._g({ attrs: { pill: "" } }, _vm.on),
+            { attrs: { pill: "" } },
             [
               _c(
                 "v-avatar",
@@ -40936,10 +41027,19 @@ var render = function() {
             attrs: {
               items: _vm.listaattivita,
               "item-text": "name",
+              "item-value": "id",
               label: "Attività",
-              dark: ""
+              dark: "",
+              "return-object": ""
             },
-            on: { change: _vm.attivitaSelezionata },
+            on: {
+              change: function($event) {
+                return _vm.attivitaSelezionata(
+                  _vm.form.attivita.id,
+                  _vm.form.attivita.tipo
+                )
+              }
+            },
             model: {
               value: _vm.form.attivita,
               callback: function($$v) {
@@ -40956,11 +41056,10 @@ var render = function() {
               filled: "",
               chips: "",
               color: "blue-grey lighten-2",
-              label: "Select",
+              label: "Ragazzi",
               "item-text": "name",
-              "item-value": "name",
-              multiple: "",
-              dark: ""
+              "item-value": "id",
+              multiple: ""
             },
             scopedSlots: _vm._u([
               {
@@ -41124,6 +41223,7 @@ var render = function() {
               label: "Quantità",
               type: "number",
               step: "0.5",
+              readonly: !_vm.abilitaqta,
               required: "",
               dark: ""
             },
@@ -41141,7 +41241,7 @@ var render = function() {
             {
               attrs: { color: "green", type: "submit", disabled: _vm.canSend }
             },
-            [_vm._v("Inserisci")]
+            [_vm._v("Inserisci\n        ")]
           )
         ],
         1
@@ -41174,7 +41274,76 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("v-simple-table", {
+    attrs: { dark: "" },
+    scopedSlots: _vm._u([
+      {
+        key: "default",
+        fn: function() {
+          return [
+            _c("thead", [
+              _c("tr", { staticStyle: { "background-color": "#2e4623" } }, [
+                _c("th", { staticClass: "text-left" }, [
+                  _vm._v("\n                Nome\n            ")
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-left" }, [
+                  _vm._v("\n                Giorno\n            ")
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-left" }, [
+                  _vm._v("\n                Attivita'\n            ")
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-left" }, [
+                  _vm._v("\n                Qta'\n            ")
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-left" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.dati, function(item, index) {
+                return _c("tr", { key: item.id }, [
+                  _c("td", [_vm._v(_vm._s(item.ragazzo))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.giorno))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.attivita))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(item.quantita))]),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { color: "red" },
+                          on: {
+                            click: function($event) {
+                              return _vm.delAttivita(item.id, index)
+                            }
+                          }
+                        },
+                        [_c("v-icon", [_vm._v("mdi-delete")])],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ])
+              }),
+              0
+            )
+          ]
+        },
+        proxy: true
+      }
+    ])
+  })
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -104202,6 +104371,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_ragazzi__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ragazzi */ "./resources/js/store/modules/ragazzi/index.js");
 /* harmony import */ var _modules_vetture__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/vetture */ "./resources/js/store/modules/vetture/index.js");
 /* harmony import */ var _modules_operatori__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/operatori */ "./resources/js/store/modules/operatori/index.js");
+/* harmony import */ var _modules_associa__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/associa */ "./resources/js/store/modules/associa/index.js");
+
 
 
 
@@ -104220,9 +104391,133 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     attivita: _modules_attivita__WEBPACK_IMPORTED_MODULE_3__["default"],
     ragazzi: _modules_ragazzi__WEBPACK_IMPORTED_MODULE_4__["default"],
     vetture: _modules_vetture__WEBPACK_IMPORTED_MODULE_5__["default"],
-    operatori: _modules_operatori__WEBPACK_IMPORTED_MODULE_6__["default"]
+    operatori: _modules_operatori__WEBPACK_IMPORTED_MODULE_6__["default"],
+    associa: _modules_associa__WEBPACK_IMPORTED_MODULE_7__["default"]
   }
 }));
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/associa/actions.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/store/modules/associa/actions.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _helps_ts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../helps.ts */ "./resources/js/helps.ts");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  loadassociazioni: function loadassociazioni(context) {
+    axios.get("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkassociazioni)).then(function (response) {
+      context.commit('setAttivitaCliente', response.data);
+    });
+  },
+  inserisciassociazione: function inserisciassociazione(context, payload) {
+    axios.post("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkassociaattivitacliente), payload).then(function (response) {
+      context.commit('inserisciattivitacliente', response.data);
+    });
+  },
+  eliminaassociazione: function eliminaassociazione(context, payload) {
+    axios["delete"]("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkassociazioni, "/").concat(payload.id)).then(function () {
+      context.commit('eliminaattivitacliente', payload.indice);
+    });
+  },
+  estrapolaassociazioneragazzi: function estrapolaassociazioneragazzi(context, id) {
+    axios.get("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkattivitacliente, "/").concat(id)).then(function (response) {
+      var valori = [];
+      response.data.forEach(function (element) {
+        valori.push(element.client_id);
+      });
+      context.commit('setEstrapolaAttivitaClienti', valori);
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/associa/getters.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/store/modules/associa/getters.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  associazioni: function associazioni(state) {
+    return state.attivitaragazzi;
+  },
+  associazioniselezionati: function associazioniselezionati(state) {
+    return state.attivitaragazziselezionati;
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/associa/index.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/store/modules/associa/index.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mutations_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mutations.js */ "./resources/js/store/modules/associa/mutations.js");
+/* harmony import */ var _actions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions.js */ "./resources/js/store/modules/associa/actions.js");
+/* harmony import */ var _getters_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getters.js */ "./resources/js/store/modules/associa/getters.js");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  namespaced: true,
+  state: function state() {
+    return {
+      attivitaragazzi: [],
+      attivitaragazziselezionati: []
+    };
+  },
+  mutations: _mutations_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+  actions: _actions_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+  getters: _getters_js__WEBPACK_IMPORTED_MODULE_2__["default"]
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/associa/mutations.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/store/modules/associa/mutations.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  setAttivitaCliente: function setAttivitaCliente(state, payload) {
+    state.attivitaragazzi = payload;
+  },
+  inserisciattivitacliente: function inserisciattivitacliente(state, payload) {
+    payload.forEach(function (element) {
+      var ele = {
+        id: element.id,
+        activity_id: element.activity_id,
+        client_id: element.client_id
+      };
+      state.attivitaragazzi.unshift(ele);
+    });
+  },
+  eliminaattivitacliente: function eliminaattivitacliente(state, indice) {
+    state.attivitaragazzi.splice(indice, 1);
+  },
+  setEstrapolaAttivitaClienti: function setEstrapolaAttivitaClienti(state, payload) {
+    state.attivitaragazziselezionati = payload;
+  }
+});
 
 /***/ }),
 
@@ -104464,6 +104759,22 @@ __webpack_require__.r(__webpack_exports__);
     axios["delete"]("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkragazzi, "/").concat(payload.id)).then(function () {
       context.commit('eliminaragazzo', payload.indice);
     });
+  },
+  inserisciattivita: function inserisciattivita(context, payload) {
+    //console.log(payload)
+    axios.post("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkattivitacliente), payload).then(function (response) {
+      context.commit('inserisciattivita', response.data);
+    });
+  },
+  loadattivita: function loadattivita(context) {
+    axios.get("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkattivitacliente)).then(function (response) {
+      context.commit('loadattivita', response.data);
+    });
+  },
+  eliminaattivita: function eliminaattivita(context, payload) {
+    axios["delete"]("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkattivitacliente, "/").concat(payload.id)).then(function () {
+      context.commit('eliminaattivita', payload.indice);
+    });
   }
 });
 
@@ -104481,6 +104792,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   ragazzi: function ragazzi(state) {
     return state.ragazzi;
+  },
+  attivita: function attivita(state) {
+    return state.attivita;
   }
 });
 
@@ -104505,7 +104819,8 @@ __webpack_require__.r(__webpack_exports__);
   namespaced: true,
   state: function state() {
     return {
-      ragazzi: []
+      ragazzi: [],
+      attivita: []
     };
   },
   mutations: _mutations_js__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -104533,6 +104848,26 @@ __webpack_require__.r(__webpack_exports__);
   },
   eliminaragazzo: function eliminaragazzo(state, indice) {
     state.ragazzi.splice(indice, 1);
+  },
+  inserisciattivita: function inserisciattivita(state, payload) {
+    //console.log(payload)
+    payload.forEach(function (element) {
+      var ele = {
+        id: element.id,
+        attivita: element.attivita,
+        costo: element.costo,
+        giorno: element.giorno,
+        quantita: element.quantita,
+        ragazzo: element.ragazzo
+      };
+      state.attivita.unshift(ele);
+    });
+  },
+  loadattivita: function loadattivita(state, payload) {
+    state.attivita = payload;
+  },
+  eliminaattivita: function eliminaattivita(state, indice) {
+    state.attivita.splice(indice, 1);
   }
 });
 
