@@ -19,5 +19,19 @@ export default {
             .then(() => {
                 context.commit('eliminapresenza', payload.indice);
             })
-    }
+    },
+
+    loadoperatori(context, payload){
+        axios.get(`${help().linkoperatori}`)
+            .then(response => {
+                context.commit('loadoperatori', response.data);
+            })
+    },
+
+    inseriscioresettimanali(context, payload){
+        axios.patch(`${help().linkassociaoperatoreore}`, payload)
+            .then(response => {
+                context.commit('inseriscioresettimanali', response.data);
+            })
+    },
 };

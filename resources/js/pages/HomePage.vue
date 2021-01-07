@@ -21,6 +21,8 @@
     }
 </script>
 
-<style scoped>
-
+<style>
+    .link{
+        text-decoration: none;
+    }
 </style>

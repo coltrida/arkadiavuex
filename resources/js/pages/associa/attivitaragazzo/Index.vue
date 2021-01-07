@@ -1,6 +1,15 @@
 <template>
     <v-container>
-        <h3 style="color: white">Associa Attività - Ragazzo</h3>
+        <div style="display: flex; justify-content: space-between">
+            <h3 style="color: white">Associa Attività - Ragazzo</h3>
+            <div>
+                <router-link to="/associa" class="link">
+                    <v-btn>
+                        Indietro
+                    </v-btn>
+                </router-link>
+            </div>
+        </div>
         <v-form @submit.prevent="inserisci">
             <v-select
                     v-model="form.attivita"

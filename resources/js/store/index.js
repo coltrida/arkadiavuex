@@ -7,6 +7,8 @@ import ragazzi from './modules/ragazzi'
 import vetture from './modules/vetture'
 import operatori from './modules/operatori'
 import associa from './modules/associa'
+import viaggi from './modules/viaggi'
+import logs from './modules/logs'
 
 Vue.use(Vuex);
 
@@ -31,6 +33,8 @@ export default new Vuex.Store({
         ragazzi,
         vetture,
         operatori,
-        associa
+        associa,
+        viaggi,
+        logs
     }
 })

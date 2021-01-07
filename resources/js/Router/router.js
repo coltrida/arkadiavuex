@@ -9,6 +9,7 @@ import Register from "../pages/auth/Register";
 import Attivita from "../pages/inserisciAttivita/Index";
 import Ragazzo from "../pages/inserisciRagazzo/Index";
 import Vettura from "../pages/inserisciVettura/Index";
+import Chilometri from "../pages/inserisciKm/Index";
 import PresenzeOperatore from "../pages/presenzeOperatore/Index";
 import PresenzeAttivita from "../pages/presenzeAttivita/Index";
 import Associa from "../pages/associa/Index";
@@ -23,6 +24,7 @@ const routes = [
     { path: '/inserisciattivita', component: Attivita },
     { path: '/inserisciragazzo', component: Ragazzo },
     { path: '/inseriscivettura', component: Vettura },
+    { path: '/inseriscikm', component: Chilometri },
     { path: '/presenzeoperatori', component: PresenzeOperatore },
     { path: '/attivitaragazzi', component: PresenzeAttivita },
     { path: '/associa', component: Associa },

@@ -79,6 +79,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "index",
@@ -241,9 +250,34 @@ var render = function() {
   return _c(
     "v-container",
     [
-      _c("h3", { staticStyle: { color: "white" } }, [
-        _vm._v("Associa Attività - Ragazzo")
-      ]),
+      _c(
+        "div",
+        {
+          staticStyle: { display: "flex", "justify-content": "space-between" }
+        },
+        [
+          _c("h3", { staticStyle: { color: "white" } }, [
+            _vm._v("Associa Attività - Ragazzo")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            [
+              _c(
+                "router-link",
+                { staticClass: "link", attrs: { to: "/associa" } },
+                [
+                  _c("v-btn", [
+                    _vm._v("\n                    Indietro\n                ")
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ]
+      ),
       _vm._v(" "),
       _c(
         "v-form",

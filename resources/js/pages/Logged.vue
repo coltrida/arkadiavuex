@@ -10,7 +10,7 @@
                 >
                     <v-item v-slot="{ active, toggle }">
                         <v-hover v-slot="{ hover }">
-                            <router-link :to="item.to">
+                            <router-link :to="item.to" class="link">
                         <v-card
                                 class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
                                 height="200"
@@ -42,7 +42,7 @@
                 >
                     <v-item v-slot="{ active, toggle }">
                         <v-hover v-slot="{ hover }">
-                            <router-link :to="item.to">
+                            <router-link :to="item.to" class="link">
                         <v-card
                                 class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
                                 height="200"
@@ -95,6 +95,7 @@
 
 
 <style scoped>
+
     .v-card {
         transition: opacity .4s ease-in-out;
     }

@@ -13,8 +13,60 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Index"
+  name: "Index",
+  created: function created() {
+    this.loadLogs();
+  },
+  computed: {
+    logs: function logs() {
+      return this.$store.getters['logs/logs'];
+    }
+  },
+  methods: {
+    loadLogs: function loadLogs() {
+      this.$store.dispatch('logs/loadlogs');
+    }
+  }
 });
 
 /***/ }),
@@ -34,7 +86,86 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "v-container",
+    [
+      _c(
+        "div",
+        {
+          staticStyle: { display: "flex", "justify-content": "space-between" }
+        },
+        [
+          _c("h3", { staticStyle: { color: "white" } }, [_vm._v("Logs")]),
+          _vm._v(" "),
+          _c(
+            "div",
+            [
+              _c(
+                "router-link",
+                { staticClass: "link", attrs: { to: "/associa" } },
+                [
+                  _c("v-btn", [
+                    _vm._v("\n                    Indietro\n                ")
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("v-simple-table", {
+        staticStyle: { "margin-top": "30px" },
+        attrs: { dark: "" },
+        scopedSlots: _vm._u([
+          {
+            key: "default",
+            fn: function() {
+              return [
+                _c("thead", [
+                  _c("tr", { staticStyle: { "background-color": "#2e4623" } }, [
+                    _c("th", { staticClass: "text-left" }, [
+                      _vm._v("\n                    Data\n                ")
+                    ]),
+                    _vm._v(" "),
+                    _c("th", { staticClass: "text-left" }, [
+                      _vm._v(
+                        "\n                    Tipologia\n                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("th", { staticClass: "text-left" }, [
+                      _vm._v(
+                        "\n                    Descrizione\n                "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.logs, function(item, index) {
+                    return _c("tr", { key: item.id }, [
+                      _c("td", [_vm._v(_vm._s(item.data))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(item.name))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(item.description))])
+                    ])
+                  }),
+                  0
+                )
+              ]
+            },
+            proxy: true
+          }
+        ])
+      })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

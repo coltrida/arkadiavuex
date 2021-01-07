@@ -15,6 +15,7 @@ const help = () => {
         linkinserisciattivita: 'http://statistichearkadia.local/api/inserisciAttivita',
         linkattivitacliente: 'http://statistichearkadia.local/api/attivita/ragazzo',
         linkassociaattivitacliente: 'http://statistichearkadia.local/api/attivita/ragazzo/associa',
+        linkassociaoperatoreore: 'http://statistichearkadia.local/api/operatori/ore',
         linkassociazioni: 'http://statistichearkadia.local/api/associazioni',
         linkstatistichepresenzeragazzi: 'http://statistichearkadia.local/api/statistiche/presenzeRagazzi',
         linkstatistichepresenzeoperatori: 'http://statistichearkadia.local/api/statistiche/presenzeOperatori',
@@ -23,6 +24,7 @@ const help = () => {
         linkannoattuale: 'http://statistichearkadia.local/api/statistiche/annoAttuale',
         linkchilometrivetture: 'http://statistichearkadia.local/api/statistiche/chilometriVetture',
         linkchilometriragazzi: 'http://statistichearkadia.local/api/statistiche/chilometriRagazzi',
+        linklog: 'http://statistichearkadia.local/api/log',
 
 
 /*
@@ -40,6 +42,7 @@ const help = () => {
                 linkinserisciattivita: 'https://www.andirivieni.eu/api/inserisciAttivita',
                 linkattivitacliente: 'https://www.andirivieni.eu/api/attivita/ragazzo',
                 linkassociaattivitacliente: 'https://www.andirivieni.eu/api/attivita/ragazzo/associa',
+                linkassociaoperatoreore: 'https://www.andirivieni.eu/api/operatori/ore',
                 linkassociazioni: 'https://www.andirivieni.eu/api/associazioni',
                 linkstatistichepresenzeragazzi: 'https://www.andirivieni.eu/api/statistiche/presenzeRagazzi',
                 linkstatistichepresenzeoperatori: 'https://www.andirivieni.eu/api/statistiche/presenzeOperatori',
@@ -48,6 +51,7 @@ const help = () => {
                 linkannoattuale: 'https://www.andirivieni.eu/api/statistiche/annoAttuale',
                 linkchilometrivetture: 'https://www.andirivieni.eu/api/statistiche/chilometriVetture',
                 linkchilometriragazzi: 'https://www.andirivieni.eu/api/statistiche/chilometriRagazzi',
+                linklog: 'https://www.andirivieni.eu/api/log',
 
 */
 

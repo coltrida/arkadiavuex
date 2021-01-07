@@ -5,7 +5,7 @@
         <v-toolbar color="blue-grey darken-3"
                    dark>
 
-            <router-link to="/">
+            <router-link to="/" class="link">
                 <v-toolbar-title>
                     <v-btn text>
                         Arkadia
@@ -23,13 +23,13 @@
                 John Leider
             </v-chip>
 
-            <router-link to="/login">
+            <router-link to="/login" class="link">
                 <v-btn text>
                     Login
                 </v-btn>
             </router-link>
 
-            <router-link to="/register">
+            <router-link to="/register" class="link">
                 <v-btn text>
                     Registrati
                 </v-btn>
@@ -46,5 +46,7 @@
 </script>
 
 <style scoped>
-
+    .link{
+        text-decoration: none;
+    }
 </style>

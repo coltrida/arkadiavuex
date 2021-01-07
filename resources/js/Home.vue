@@ -43,4 +43,5 @@
 .route-leave-from {
     opacity: 1;
 }
+
 </style>
