@@ -1,5 +1,5 @@
 <template>
-    <v-parallax height="700" src="/img/home.jpg"></v-parallax>
+    <v-parallax height="600" src="/img/home.jpg"></v-parallax>
 </template>
 
 <script>

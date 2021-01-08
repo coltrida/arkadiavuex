@@ -1,5 +1,5 @@
 <template>
-    <div style="margin-top: 40px">
+    <div>
         <not-logged v-if="!isLogged"></not-logged>
         <logged v-else></logged>
     </div>
@@ -13,11 +13,17 @@
 
         components: { NotLogged, Logged },
 
-        data(){
-            return{
-                isLogged: true
+        computed:{
+            isLogged(){
+                return this.$store.getters['auth/isLogged']
             }
-        }
+        },
+
+        /*watch:{
+            isLogged(){
+                return this.$router.replace('/');
+            }
+        },*/
     }
 </script>
 

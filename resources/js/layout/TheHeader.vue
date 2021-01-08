@@ -14,26 +14,36 @@
             </router-link>
             <v-spacer></v-spacer>
 
-            <v-chip
-                    pill
-            >
-                <v-avatar left>
-                    <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
-                </v-avatar>
-                John Leider
-            </v-chip>
+            <section v-if="user">
+                <v-chip
+                        pill
+                >
+                    <v-avatar left>
+                        <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
+                    </v-avatar>
+                    user: {{ user }}
+                </v-chip>
 
-            <router-link to="/login" class="link">
-                <v-btn text>
-                    Login
+                <v-btn @click="logout" text>
+                    Logout
                 </v-btn>
-            </router-link>
+            </section>
 
-            <router-link to="/register" class="link">
-                <v-btn text>
-                    Registrati
-                </v-btn>
-            </router-link>
+
+            <section v-else>
+                <router-link to="/login" class="link">
+                    <v-btn text>
+                        Login
+                    </v-btn>
+                </router-link>
+
+                <router-link to="/register" class="link">
+                    <v-btn text>
+                        Registrati
+                    </v-btn>
+                </router-link>
+            </section>
+
 
         </v-toolbar>
     </v-card>
@@ -41,7 +51,29 @@
 
 <script>
     export default {
-        name: "TheHeader"
+        name: "TheHeader",
+
+        computed: {
+            user(){
+                return this.$store.getters['auth/user']
+            },
+
+            isLogged(){
+                return this.$store.getters['auth/isLogged']
+            }
+        },
+
+        /*watch:{
+            isLogged(){
+                return this.$router.replace('/');
+            }
+        },*/
+
+        methods:{
+            logout(){
+                this.$store.dispatch('auth/logout')
+            }
+        }
     }
 </script>
 

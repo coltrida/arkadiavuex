@@ -1,5 +1,5 @@
 <template>
-    <v-item-group active-class="primary">
+    <v-item-group active-class="primary" style="margin-top: 40px">
         <v-container>
             <v-row>
                 <v-col

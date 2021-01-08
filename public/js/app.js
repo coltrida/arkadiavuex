@@ -2125,8 +2125,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "TheHeader"
+  name: "TheHeader",
+  computed: {
+    user: function user() {
+      return this.$store.getters['auth/user'];
+    },
+    isLogged: function isLogged() {
+      return this.$store.getters['auth/isLogged'];
+    }
+  },
+
+  /*watch:{
+      isLogged(){
+          return this.$router.replace('/');
+      }
+  },*/
+  methods: {
+    logout: function logout() {
+      this.$store.dispatch('auth/logout');
+    }
+  }
 });
 
 /***/ }),
@@ -2157,11 +2186,17 @@ __webpack_require__.r(__webpack_exports__);
     NotLogged: _NotLogged__WEBPACK_IMPORTED_MODULE_0__["default"],
     Logged: _Logged__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
-  data: function data() {
-    return {
-      isLogged: true
-    };
+  computed: {
+    isLogged: function isLogged() {
+      return this.$store.getters['auth/isLogged'];
+    }
   }
+  /*watch:{
+      isLogged(){
+          return this.$router.replace('/');
+      }
+  },*/
+
 });
 
 /***/ }),
@@ -2408,10 +2443,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Login",
+  data: function data() {
+    return {
+      form: {
+        email: '',
+        password: ''
+      }
+    };
+  },
+  computed: {
+    isLogged: function isLogged() {
+      return this.$store.getters['auth/isLogged'];
+    }
+  },
+  watch: {
+    isLogged: function isLogged() {
+      return this.$router.replace('/');
+    }
+  },
   methods: {
-    login: function login() {}
+    login: function login() {
+      this.$store.dispatch('auth/login', this.form);
+    }
   }
 });
 
@@ -40281,46 +40339,72 @@ var render = function() {
           _vm._v(" "),
           _c("v-spacer"),
           _vm._v(" "),
-          _c(
-            "v-chip",
-            { attrs: { pill: "" } },
-            [
-              _c(
-                "v-avatar",
-                { attrs: { left: "" } },
+          _vm.user
+            ? _c(
+                "section",
                 [
-                  _c("v-img", {
-                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.png" }
-                  })
+                  _c(
+                    "v-chip",
+                    { attrs: { pill: "" } },
+                    [
+                      _c(
+                        "v-avatar",
+                        { attrs: { left: "" } },
+                        [
+                          _c("v-img", {
+                            attrs: {
+                              src: "https://cdn.vuetifyjs.com/images/john.png"
+                            }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(
+                        "\n                user: " +
+                          _vm._s(_vm.user) +
+                          "\n            "
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    { attrs: { text: "" }, on: { click: _vm.logout } },
+                    [_vm._v("\n                Logout\n            ")]
+                  )
                 ],
                 1
-              ),
-              _vm._v("\n            John Leider\n        ")
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            { staticClass: "link", attrs: { to: "/login" } },
-            [
-              _c("v-btn", { attrs: { text: "" } }, [
-                _vm._v("\n                Login\n            ")
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            { staticClass: "link", attrs: { to: "/register" } },
-            [
-              _c("v-btn", { attrs: { text: "" } }, [
-                _vm._v("\n                Registrati\n            ")
-              ])
-            ],
-            1
-          )
+              )
+            : _c(
+                "section",
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "link", attrs: { to: "/login" } },
+                    [
+                      _c("v-btn", { attrs: { text: "" } }, [
+                        _vm._v("\n                    Login\n                ")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    { staticClass: "link", attrs: { to: "/register" } },
+                    [
+                      _c("v-btn", { attrs: { text: "" } }, [
+                        _vm._v(
+                          "\n                    Registrati\n                "
+                        )
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
         ],
         1
       )
@@ -40350,12 +40434,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticStyle: { "margin-top": "40px" } },
-    [!_vm.isLogged ? _c("not-logged") : _c("logged")],
-    1
-  )
+  return _c("div", [!_vm.isLogged ? _c("not-logged") : _c("logged")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -40381,7 +40460,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-item-group",
-    { attrs: { "active-class": "primary" } },
+    {
+      staticStyle: { "margin-top": "40px" },
+      attrs: { "active-class": "primary" }
+    },
     [
       _c(
         "v-container",
@@ -40597,7 +40679,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-parallax", { attrs: { height: "700", src: "/img/home.jpg" } })
+  return _c("v-parallax", { attrs: { height: "600", src: "/img/home.jpg" } })
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -40763,11 +40845,31 @@ var render = function() {
         },
         [
           _c("v-text-field", {
-            attrs: { label: "E-mail", type: "email", required: "" }
+            attrs: { label: "E-mail", type: "email", required: "", dark: "" },
+            model: {
+              value: _vm.form.email,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "email", $$v)
+              },
+              expression: "form.email"
+            }
           }),
           _vm._v(" "),
           _c("v-text-field", {
-            attrs: { label: "Password", type: "password", required: "" }
+            attrs: {
+              label: "Password",
+              type: "password",
+              autocomplete: "on",
+              required: "",
+              dark: ""
+            },
+            model: {
+              value: _vm.form.password,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "password", $$v)
+              },
+              expression: "form.password"
+            }
           }),
           _vm._v(" "),
           _c("v-btn", { attrs: { color: "green", type: "submit" } }, [
@@ -103817,11 +103919,11 @@ var AssociaAttivitaRagazzo = function AssociaAttivitaRagazzo() {
 };
 
 var AssociaOperatoreOre = function AssociaOperatoreOre() {
-  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../pages/associa/operatoreore/Index */ "./resources/js/pages/associa/operatoreore/Index.vue"));
+  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../pages/associa/operatoreore/Index */ "./resources/js/pages/associa/operatoreore/Index.vue"));
 };
 
 var Log = function Log() {
-  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../pages/associa/log/Index */ "./resources/js/pages/associa/log/Index.vue"));
+  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../pages/associa/log/Index */ "./resources/js/pages/associa/log/Index.vue"));
 };
 
 var routes = [{
@@ -105513,7 +105615,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _modules_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/auth */ "./resources/js/store/modules/auth/index.js");
-/* harmony import */ var _modules_auth__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_auth__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_attivita__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/attivita */ "./resources/js/store/modules/attivita/index.js");
 /* harmony import */ var _modules_ragazzi__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ragazzi */ "./resources/js/store/modules/ragazzi/index.js");
 /* harmony import */ var _modules_vetture__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/vetture */ "./resources/js/store/modules/vetture/index.js");
@@ -105538,7 +105639,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
   mutations: {},
   actions: {},
   modules: {
-    auth: _modules_auth__WEBPACK_IMPORTED_MODULE_2___default.a,
+    auth: _modules_auth__WEBPACK_IMPORTED_MODULE_2__["default"],
     attivita: _modules_attivita__WEBPACK_IMPORTED_MODULE_3__["default"],
     ragazzi: _modules_ragazzi__WEBPACK_IMPORTED_MODULE_4__["default"],
     vetture: _modules_vetture__WEBPACK_IMPORTED_MODULE_5__["default"],
@@ -105774,14 +105875,105 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/store/modules/auth/actions.js":
+/*!****************************************************!*\
+  !*** ./resources/js/store/modules/auth/actions.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _helps_ts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../helps.ts */ "./resources/js/helps.ts");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  login: function login(context, payload) {
+    axios.post("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linklogin), payload).then(function (response) {
+      context.commit('login', response.data);
+    });
+  },
+  logout: function logout(context) {
+    context.commit('logout');
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/auth/getters.js":
+/*!****************************************************!*\
+  !*** ./resources/js/store/modules/auth/getters.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  isLogged: function isLogged(state) {
+    return state.isLogged;
+  },
+  user: function user(state) {
+    return state.user;
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/store/modules/auth/index.js":
 /*!**************************************************!*\
   !*** ./resources/js/store/modules/auth/index.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mutations_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mutations.js */ "./resources/js/store/modules/auth/mutations.js");
+/* harmony import */ var _actions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions.js */ "./resources/js/store/modules/auth/actions.js");
+/* harmony import */ var _getters_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getters.js */ "./resources/js/store/modules/auth/getters.js");
 
 
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  namespaced: true,
+  state: function state() {
+    return {
+      isLogged: false,
+      user: '',
+      oresettimanali: '',
+      oresaldo: ''
+    };
+  },
+  mutations: _mutations_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+  actions: _actions_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+  getters: _getters_js__WEBPACK_IMPORTED_MODULE_2__["default"]
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/auth/mutations.js":
+/*!******************************************************!*\
+  !*** ./resources/js/store/modules/auth/mutations.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  login: function login(state, payload) {
+    state.isLogged = true;
+    state.user = payload.name;
+    state.oresettimanali = payload.oresettimanali;
+    state.oresaldo = payload.oresaldo;
+  },
+  logout: function logout(state) {
+    state.isLogged = false;
+    state.user = '';
+    state.oresettimanali = '';
+    state.oresaldo = '';
+  }
+});
 
 /***/ }),
 

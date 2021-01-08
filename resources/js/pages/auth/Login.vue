@@ -2,17 +2,20 @@
     <v-container>
         <v-form @submit.prevent="login">
             <v-text-field
-
+                    v-model="form.email"
                     label="E-mail"
                     type="email"
                     required
+                    dark
             ></v-text-field>
 
             <v-text-field
-
+                    v-model="form.password"
                     label="Password"
                     type="password"
+                    autocomplete="on"
                     required
+                    dark
             ></v-text-field>
 
             <v-btn
@@ -33,9 +36,31 @@
     export default {
         name: "Login",
 
+        data(){
+            return{
+                form: {
+                    email: '',
+                    password: ''
+                }
+            }
+        },
+
+        computed:{
+            isLogged(){
+                return this.$store.getters['auth/isLogged']
+            }
+
+        },
+
+        watch:{
+            isLogged(){
+                return this.$router.replace('/');
+            }
+        },
+
         methods: {
             login(){
-
+                this.$store.dispatch('auth/login', this.form);
             }
         }
     }
