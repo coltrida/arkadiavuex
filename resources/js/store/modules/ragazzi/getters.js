@@ -6,4 +6,16 @@ export default {
     attivita(state) {
         return state.attivita;
     },
+
+    statisticheattivita(state) {
+        return state.statisticheattivita;
+    },
+
+    costoTotale(state) {
+        return state.costoTotale;
+    },
+
+    ragazzo(state) {
+        return state.ragazzo;
+    }
 };

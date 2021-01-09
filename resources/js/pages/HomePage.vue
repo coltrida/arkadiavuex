@@ -15,15 +15,11 @@
 
         computed:{
             isLogged(){
-                return this.$store.getters['auth/isLogged']
+                //return this.$store.getters['auth/isLogged']
+                return true
             }
         },
 
-        /*watch:{
-            isLogged(){
-                return this.$router.replace('/');
-            }
-        },*/
     }
 </script>
 

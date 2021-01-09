@@ -55,7 +55,7 @@
                 </template>
             </v-autocomplete>
 
-            <v-menu
+            <!--<v-menu
                     v-model="menu2"
                     :close-on-content-click="false"
                     :nudge-right="40"
@@ -80,7 +80,50 @@
                         locale="it"
                         :first-day-of-week="1"
                 ></v-date-picker>
-            </v-menu>
+            </v-menu>-->
+
+
+            <v-dialog
+                    ref="dialog"
+                    v-model="modal"
+                    :return-value.sync="date"
+                    persistent
+                    width="290px"
+            >
+                <template v-slot:activator="{ on, attrs }">
+                    <v-text-field
+                            v-model="form.giorno"
+                            label="Giorno"
+                            prepend-icon="mdi-calendar"
+                            readonly
+                            dark
+                            v-bind="attrs"
+                            v-on="on"
+                    ></v-text-field>
+                </template>
+                <v-date-picker
+                        v-model="form.giorno"
+                        scrollable
+                        locale="it"
+                        :first-day-of-week="1"
+                >
+                    <v-spacer></v-spacer>
+                    <v-btn
+                            text
+                            color="primary"
+                            @click="modal = false"
+                    >
+                        Cancel
+                    </v-btn>
+                    <v-btn
+                            text
+                            color="primary"
+                            @click="$refs.dialog.save(date)"
+                    >
+                        OK
+                    </v-btn>
+                </v-date-picker>
+            </v-dialog>
 
             <v-text-field
                     v-model="form.quantita"
@@ -131,6 +174,8 @@
             }
 
             return {
+                modal: false,
+                date: new Date().toISOString().substr(0, 10),
                 abilitaqta: false,
                 autoUpdate: true,
                 friends: [],

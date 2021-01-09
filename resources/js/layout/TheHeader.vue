@@ -21,7 +21,7 @@
                     <v-avatar left>
                         <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
                     </v-avatar>
-                    user: {{ user }}
+                    {{ user }}
                 </v-chip>
 
                 <v-btn @click="logout" text>
@@ -62,12 +62,6 @@
                 return this.$store.getters['auth/isLogged']
             }
         },
-
-        /*watch:{
-            isLogged(){
-                return this.$router.replace('/');
-            }
-        },*/
 
         methods:{
             logout(){

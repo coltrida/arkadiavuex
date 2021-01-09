@@ -22,7 +22,6 @@ export default {
     },
 
     inserisciattivita(context, payload){
-        //console.log(payload)
         axios.post(`${help().linkattivitacliente}`, payload)
             .then(response => {
                 context.commit('inserisciattivita', response.data);
@@ -42,4 +41,18 @@ export default {
                 context.commit('eliminaattivita', payload.indice);
             })
     },
+
+    loadstatisticheattivitaragazzi(context, payload){
+        axios.post(`${help().linkstatistichepresenzeragazzi}`, payload)
+            .then(response => {
+                context.commit('loadstatisticheattivitaragazzi', response.data)
+            })
+    },
+
+    loadragazzo(context, payload){
+        axios.get(`${help().linkragazzi}/${payload}`)
+            .then(response => {
+                context.commit('loadragazzo', response.data)
+            })
+    }
 };

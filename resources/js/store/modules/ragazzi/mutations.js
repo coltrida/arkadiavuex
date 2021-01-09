@@ -32,5 +32,21 @@ export default {
 
     eliminaattivita(state, indice){
         state.attivita.splice(indice, 1)
+    },
+
+    loadstatisticheattivitaragazzi(state, payload) {
+        //console.log('mutataion: '+  payload[0]);
+        state.statisticheattivita = payload[0];
+        state.costoTotale = payload[1];
+    },
+
+    cleanstatistiche(state) {
+        state.statisticheattivita = [];
+        state.costoTotale = '';
+        state.ragazzo = '';
+    },
+
+    loadragazzo(state, payload) {
+        state.ragazzo = payload;
     }
 };

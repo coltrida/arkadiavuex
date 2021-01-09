@@ -7,6 +7,7 @@ export default {
     state() {
         return {
             isLogged: false,
+            user_id: '',
             user: '',
             oresettimanali: '',
             oresaldo: ''

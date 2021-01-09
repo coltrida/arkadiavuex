@@ -7,7 +7,10 @@ export default {
     state() {
         return {
             ragazzi: [],
-            attivita: []
+            attivita: [],
+            statisticheattivita: [],
+            costoTotale: '',
+            ragazzo: ''
         };
     },
     mutations,

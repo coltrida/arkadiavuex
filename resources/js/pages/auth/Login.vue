@@ -38,6 +38,7 @@
 
         data(){
             return{
+                cansend: false,
                 form: {
                     email: '',
                     password: ''
