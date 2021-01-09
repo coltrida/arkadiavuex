@@ -34,4 +34,26 @@ export default {
                 context.commit('inseriscioresettimanali', response.data);
             })
     },
+
+    loadSettimane(context){
+        axios.get(`${help().linkstatisticheoperatori}`)
+            .then(response => {
+                context.commit('loadSettimane', response.data);
+            })
+    },
+
+    loadstatisticheoperatori(context, payload){
+        axios.post(`${help().linkstatistichepresenzeoperatori}`, payload)
+            .then(response => {
+                context.commit('loadstatisticheoperatori', response.data)
+            })
+    },
+
+    loadoperatore(context, payload){
+        console.log(`${help().linkoperatori}/${payload}`)
+        axios.get(`${help().linkoperatori}/${payload}`)
+            .then(response => {
+                context.commit('loadoperatore', response.data);
+            })
+    },
 };

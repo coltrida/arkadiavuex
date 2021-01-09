@@ -241,7 +241,7 @@ var render = function() {
         },
         [
           _c("h3", { staticStyle: { color: "white" } }, [
-            _vm._v("Statistiche Presenze")
+            _vm._v("Statistiche Presenze Ragazzi")
           ]),
           _vm._v(" "),
           _c(
@@ -399,6 +399,8 @@ var render = function() {
                               _vm._v(
                                 "\n                        Attivita': " +
                                   _vm._s(item[0].activity.name) +
+                                  " - " +
+                                  _vm._s(item[0].activity.tipo) +
                                   "\n                    "
                               )
                             ]),
@@ -449,7 +451,7 @@ var render = function() {
         })
       }),
       _vm._v(" "),
-      _vm.statistiche
+      _vm.ragazzo
         ? _c(
             "section",
             [
@@ -461,7 +463,7 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _c("v-alert", { attrs: { color: "pink", dark: "" } }, [
+              _c("v-alert", { attrs: { color: "blue accent-4", dark: "" } }, [
                 _vm._v(
                   "\n            Saldo Voucher: " +
                     _vm._s(_vm.ragazzo.voucher) +

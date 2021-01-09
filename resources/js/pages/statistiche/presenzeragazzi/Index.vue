@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <div style="display: flex; justify-content: space-between">
-            <h3 style="color: white">Statistiche Presenze</h3>
+            <h3 style="color: white">Statistiche Presenze Ragazzi</h3>
             <div>
                 <router-link to="/statistiche" class="link">
                     <v-btn>

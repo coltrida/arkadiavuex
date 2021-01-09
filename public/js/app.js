@@ -104571,6 +104571,7 @@ const help = () => {
         linkassociazioni: 'http://statistichearkadia.local/api/associazioni',
         linkstatistichepresenzeragazzi: 'http://statistichearkadia.local/api/statistiche/presenzeRagazzi',
         linkstatistichepresenzeoperatori: 'http://statistichearkadia.local/api/statistiche/presenzeOperatori',
+        linkstatisticheoperatori: 'http://statistichearkadia.local/api/statistiche/operatori',
         linksettimanaattuale: 'http://statistichearkadia.local/api/statistiche/settimanaAttuale',
         linkmeseattuale: 'http://statistichearkadia.local/api/statistiche/meseAttuale',
         linkannoattuale: 'http://statistichearkadia.local/api/statistiche/annoAttuale',
@@ -104590,6 +104591,7 @@ const help = () => {
                 linkpresenzeoperatore: 'https://www.andirivieni.eu/api/presenze',
                 linkinserisciragazzo: 'https://www.andirivieni.eu/api/inserisciRagazzo',
                 linklogin: 'https://www.andirivieni.eu/api/login',
+                linkregister: 'https://www.andirivieni.eu/api/register',
                 linkinseriscivettura: 'https://www.andirivieni.eu/api/vetture/inserisci',
                 linkinserisciattivita: 'https://www.andirivieni.eu/api/inserisciAttivita',
                 linkattivitacliente: 'https://www.andirivieni.eu/api/attivita/ragazzo',
@@ -104598,6 +104600,7 @@ const help = () => {
                 linkassociazioni: 'https://www.andirivieni.eu/api/associazioni',
                 linkstatistichepresenzeragazzi: 'https://www.andirivieni.eu/api/statistiche/presenzeRagazzi',
                 linkstatistichepresenzeoperatori: 'https://www.andirivieni.eu/api/statistiche/presenzeOperatori',
+                linkstatisticheoperatori: 'https://www.andirivieni.eu/api/statistiche/operatori',
                 linksettimanaattuale: 'https://www.andirivieni.eu/api/statistiche/settimanaAttuale',
                 linkmeseattuale: 'https://www.andirivieni.eu/api/statistiche/meseAttuale',
                 linkannoattuale: 'https://www.andirivieni.eu/api/statistiche/annoAttuale',
@@ -106723,6 +106726,22 @@ __webpack_require__.r(__webpack_exports__);
     axios.patch("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkassociaoperatoreore), payload).then(function (response) {
       context.commit('inseriscioresettimanali', response.data);
     });
+  },
+  loadSettimane: function loadSettimane(context) {
+    axios.get("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkstatisticheoperatori)).then(function (response) {
+      context.commit('loadSettimane', response.data);
+    });
+  },
+  loadstatisticheoperatori: function loadstatisticheoperatori(context, payload) {
+    axios.post("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkstatistichepresenzeoperatori), payload).then(function (response) {
+      context.commit('loadstatisticheoperatori', response.data);
+    });
+  },
+  loadoperatore: function loadoperatore(context, payload) {
+    console.log("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkoperatori, "/").concat(payload));
+    axios.get("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkoperatori, "/").concat(payload)).then(function (response) {
+      context.commit('loadoperatore', response.data);
+    });
   }
 });
 
@@ -106743,6 +106762,21 @@ __webpack_require__.r(__webpack_exports__);
   },
   operatori: function operatori(state) {
     return state.operatori;
+  },
+  settimanaAttuale: function settimanaAttuale(state) {
+    return state.settimanaAttuale;
+  },
+  settimane: function settimane(state) {
+    return state.settimane;
+  },
+  statistiche: function statistiche(state) {
+    return state.statistiche;
+  },
+  totore: function totore(state) {
+    return state.totore;
+  },
+  operatore: function operatore(state) {
+    return state.operatore;
   }
 });
 
@@ -106768,7 +106802,12 @@ __webpack_require__.r(__webpack_exports__);
   state: function state() {
     return {
       presenze: [],
-      operatori: []
+      operatori: [],
+      settimanaAttuale: '',
+      statistiche: [],
+      settimane: [],
+      totore: '',
+      operatore: ''
     };
   },
   mutations: _mutations_js__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -106805,6 +106844,24 @@ __webpack_require__.r(__webpack_exports__);
       return operatore.name === payload.name;
     });
     ele.oresettimanali = payload.oresettimanali;
+  },
+  loadSettimane: function loadSettimane(state, payload) {
+    state.settimanaAttuale = payload[0];
+    state.settimane = payload[1];
+  },
+  loadstatisticheoperatori: function loadstatisticheoperatori(state, payload) {
+    //console.log(payload[0]);
+    state.statistiche = payload[0];
+    state.totore = payload[1];
+  },
+  loadoperatore: function loadoperatore(state, payload) {
+    //console.log(payload)
+    state.operatore = payload;
+  },
+  cleanstatistiche: function cleanstatistiche(state) {
+    state.statistiche = [];
+    state.totore = '';
+    state.operatore = '';
   }
 });
 

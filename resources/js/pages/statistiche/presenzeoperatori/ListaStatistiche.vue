@@ -1,56 +1,46 @@
 <template>
     <div>
-        <v-simple-table dark style="margin-bottom: 20px" v-for="(item) in statistiche"
-                        :key="item.id">
+
+        <v-simple-table dark>
             <template v-slot:default>
                 <thead>
                 <tr style="background-color: #2e4623">
                     <th class="text-left">
-                        <div>
-                            Attivita': {{ item[0].activity.name }} - {{ item[0].activity.tipo }}
-                        </div>
-                        <div>
-                            Giorno
-                        </div>
+                        Giorno
                     </th>
                     <th class="text-left">
-                        Quantita'
-                    </th>
-                    <th class="text-left">
-                        costo
+                        Ore
                     </th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr
-                        v-for="(ele) in item"
+                        v-for="(ele) in statistiche"
                         :key="ele.id"
                 >
                     <td>{{ ele.giorno }}</td>
-                    <td>{{ ele.quantita }}</td>
-                    <td>{{ele.costo}}</td>
+                    <td>{{ ele.ore }}</td>
                 </tr>
                 </tbody>
             </template>
         </v-simple-table>
 
-        <section v-if="ragazzo">
+        <section>
             <v-alert
                     color="blue-grey"
                     dark
             >
-                Costo Totale: {{ totale }}
+                Totale Ore: {{ totore }}
             </v-alert>
             <v-alert
                     color="blue accent-4"
                     dark
             >
-                Saldo Voucher: {{ ragazzo.voucher }}
+                Saldo Ore: {{ operatore.oresaldo }}
             </v-alert>
         </section>
 
     </div>
-
 </template>
 
 <script>
@@ -59,16 +49,16 @@
 
         computed:{
             statistiche(){
-                return this.$store.getters['ragazzi/statisticheattivita']
+                return this.$store.getters['operatori/statistiche']
             },
 
-            totale(){
-                return this.$store.getters['ragazzi/costoTotale']
+            totore(){
+                return this.$store.getters['operatori/totore']
             },
 
-            ragazzo(){
-                return this.$store.getters['ragazzi/ragazzo'];
-            }
+            operatore(){
+                return this.$store.getters['operatori/operatore']
+            },
 
         },
 

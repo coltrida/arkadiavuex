@@ -19,4 +19,26 @@ export default {
         let ele = state.operatori.find((operatore) => operatore.name === payload.name);
         ele.oresettimanali = payload.oresettimanali
     },
+
+    loadSettimane(state, payload){
+        state.settimanaAttuale = payload[0];
+        state.settimane = payload[1];
+    },
+
+    loadstatisticheoperatori(state, payload){
+        //console.log(payload[0]);
+        state.statistiche = payload[0];
+        state.totore = payload[1];
+    },
+
+    loadoperatore(state, payload){
+        //console.log(payload)
+        state.operatore = payload;
+    },
+
+    cleanstatistiche(state){
+        state.statistiche = [];
+        state.totore = '';
+        state.operatore = ''
+    }
 };

@@ -17,5 +17,7 @@ export default {
 
     ragazzo(state) {
         return state.ragazzo;
-    }
+    },
+
+
 };

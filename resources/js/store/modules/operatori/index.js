@@ -7,7 +7,12 @@ export default {
     state() {
         return {
             presenze: [],
-            operatori: []
+            operatori: [],
+            settimanaAttuale: '',
+            statistiche: [],
+            settimane: [],
+            totore: '',
+            operatore: ''
         };
     },
     mutations,
