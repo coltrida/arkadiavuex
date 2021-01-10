@@ -3737,33 +3737,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "index",
@@ -3883,6 +3856,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -4101,6 +4075,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -43431,31 +43406,54 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("v-simple-table", {
-    attrs: { dark: "" },
+    attrs: { dark: "", "fixed-header": "", height: "300px" },
     scopedSlots: _vm._u([
       {
         key: "default",
         fn: function() {
           return [
             _c("thead", [
-              _c("tr", { staticStyle: { "background-color": "#2e4623" } }, [
-                _c("th", { staticClass: "text-left" }, [
-                  _vm._v("\n                Nome\n            ")
-                ]),
+              _c("tr", [
+                _c(
+                  "th",
+                  {
+                    staticClass: "text-left",
+                    staticStyle: { "background-color": "#2e4623" }
+                  },
+                  [_vm._v("\n                Nome\n            ")]
+                ),
                 _vm._v(" "),
-                _c("th", { staticClass: "text-left" }, [
-                  _vm._v("\n                Giorno\n            ")
-                ]),
+                _c(
+                  "th",
+                  {
+                    staticClass: "text-left",
+                    staticStyle: { "background-color": "#2e4623" }
+                  },
+                  [_vm._v("\n                Giorno\n            ")]
+                ),
                 _vm._v(" "),
-                _c("th", { staticClass: "text-left" }, [
-                  _vm._v("\n                Attivita'\n            ")
-                ]),
+                _c(
+                  "th",
+                  {
+                    staticClass: "text-left",
+                    staticStyle: { "background-color": "#2e4623" }
+                  },
+                  [_vm._v("\n                Attivita'\n            ")]
+                ),
                 _vm._v(" "),
-                _c("th", { staticClass: "text-left" }, [
-                  _vm._v("\n                Qta'\n            ")
-                ]),
+                _c(
+                  "th",
+                  {
+                    staticClass: "text-left",
+                    staticStyle: { "background-color": "#2e4623" }
+                  },
+                  [_vm._v("\n                Qta'\n            ")]
+                ),
                 _vm._v(" "),
-                _c("th", { staticClass: "text-left" })
+                _c("th", {
+                  staticClass: "text-left",
+                  staticStyle: { "background-color": "#2e4623" }
+                })
               ])
             ]),
             _vm._v(" "),
@@ -43712,23 +43710,36 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("v-simple-table", {
-    attrs: { dark: "" },
+    attrs: { dark: "", "fixed-header": "", height: "300px" },
     scopedSlots: _vm._u([
       {
         key: "default",
         fn: function() {
           return [
             _c("thead", [
-              _c("tr", { staticStyle: { "background-color": "#2e4623" } }, [
-                _c("th", { staticClass: "text-left" }, [
-                  _vm._v("\n                Giorno\n            ")
-                ]),
+              _c("tr", [
+                _c(
+                  "th",
+                  {
+                    staticClass: "text-left",
+                    staticStyle: { "background-color": "#2e4623" }
+                  },
+                  [_vm._v("\n                Giorno\n            ")]
+                ),
                 _vm._v(" "),
-                _c("th", { staticClass: "text-left" }, [
-                  _vm._v("\n                Ore\n            ")
-                ]),
+                _c(
+                  "th",
+                  {
+                    staticClass: "text-left",
+                    staticStyle: { "background-color": "#2e4623" }
+                  },
+                  [_vm._v("\n                Ore\n            ")]
+                ),
                 _vm._v(" "),
-                _c("th", { staticClass: "text-left" })
+                _c("th", {
+                  staticClass: "text-left",
+                  staticStyle: { "background-color": "#2e4623" }
+                })
               ])
             ]),
             _vm._v(" "),

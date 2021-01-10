@@ -1,21 +1,22 @@
 <template>
-    <v-simple-table dark>
+    <v-simple-table dark fixed-header
+                    height="300px">
         <template v-slot:default>
             <thead>
-            <tr style="background-color: #2e4623">
-                <th class="text-left">
+            <tr>
+                <th class="text-left" style="background-color: #2e4623">
                     Nome
                 </th>
-                <th class="text-left">
+                <th class="text-left" style="background-color: #2e4623">
                     Giorno
                 </th>
-                <th class="text-left">
+                <th class="text-left" style="background-color: #2e4623">
                     Attivita'
                 </th>
-                <th class="text-left">
+                <th class="text-left" style="background-color: #2e4623">
                     Qta'
                 </th>
-                <th class="text-left">
+                <th class="text-left" style="background-color: #2e4623">
 
                 </th>
             </tr>

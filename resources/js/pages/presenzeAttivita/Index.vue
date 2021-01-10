@@ -55,33 +55,6 @@
                 </template>
             </v-autocomplete>
 
-            <!--<v-menu
-                    v-model="menu2"
-                    :close-on-content-click="false"
-                    :nudge-right="40"
-                    transition="scale-transition"
-                    offset-y
-                    min-width="290px"
-            >
-                <template v-slot:activator="{ on, attrs }">
-                    <v-text-field
-                            v-model="form.giorno"
-                            label="Giorno"
-                            prepend-icon="mdi-calendar"
-                            readonly
-                            v-bind="attrs"
-                            dark
-                            v-on="on"
-                    ></v-text-field>
-                </template>
-                <v-date-picker
-                        v-model="form.giorno"
-                        @input="menu2 = false"
-                        locale="it"
-                        :first-day-of-week="1"
-                ></v-date-picker>
-            </v-menu>-->
-
 
             <v-dialog
                     ref="dialog"
