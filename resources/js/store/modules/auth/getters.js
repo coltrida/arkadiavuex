@@ -7,7 +7,19 @@ export default {
         return state.user;
     },
 
+    role(state) {
+        if(state.role == 1){
+            return true
+        } else {
+            return false;
+        }
+    },
+
     user_id(state) {
         return state.user_id
+    },
+
+    error(state) {
+        return state.error
     }
 };

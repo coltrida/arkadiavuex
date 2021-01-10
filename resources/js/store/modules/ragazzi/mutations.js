@@ -35,18 +35,25 @@ export default {
     },
 
     loadstatisticheattivitaragazzi(state, payload) {
-        //console.log('mutataion: '+  payload[0]);
         state.statisticheattivita = payload[0];
         state.costoTotale = payload[1];
     },
 
     cleanstatistiche(state) {
         state.statisticheattivita = [];
+        state.statistichekm = [];
         state.costoTotale = '';
+        state.kmTotale = '';
         state.ragazzo = '';
     },
 
     loadragazzo(state, payload) {
         state.ragazzo = payload;
-    }
+    },
+
+    loadstatistichekm(state, payload) {
+        //console.log(payload[0])
+        state.statistichekm = payload[0];
+        state.kmTotale = payload[1];
+    },
 };

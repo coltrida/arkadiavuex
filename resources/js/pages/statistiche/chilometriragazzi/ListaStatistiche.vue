@@ -1,56 +1,50 @@
 <template>
     <div>
-        <v-simple-table dark style="margin-bottom: 20px" v-for="(item) in statistiche"
-                        :key="item.id">
+
+        <v-simple-table dark>
             <template v-slot:default>
                 <thead>
                 <tr style="background-color: #2e4623">
                     <th class="text-left">
-                        <div>
-                            <h2>Attivita': {{ item[0].activity.name }} - {{ item[0].activity.tipo }}</h2>
-                        </div>
-                        <div>
-                            Giorno
-                        </div>
+                        Giorno
                     </th>
                     <th class="text-left">
-                        Quantita'
+                        km percorsi
                     </th>
                     <th class="text-left">
-                        costo
+                        Operatore
                     </th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr
-                        v-for="(ele) in item"
+                        v-for="(ele) in statistiche"
                         :key="ele.id"
                 >
                     <td>{{ ele.giorno }}</td>
-                    <td>{{ ele.quantita }}</td>
-                    <td>{{ele.costo}}</td>
+                    <td>{{ ele.kmPercorsi }}</td>
+                    <td>{{ ele.operatore }}</td>
                 </tr>
                 </tbody>
             </template>
         </v-simple-table>
 
-        <section v-if="ragazzo">
+        <section v-if="totale">
             <v-alert
                     color="blue-grey"
                     dark
             >
-                Costo Totale: {{ totale }}
+                Totale Ore: {{ totale }}
             </v-alert>
             <v-alert
-                    color="blue accent-4"
+                    color="blue-grey"
                     dark
             >
-                Saldo Voucher: {{ ragazzo.voucher }}
+                Costo Totale: € {{ totale*0.45 }}
             </v-alert>
         </section>
 
     </div>
-
 </template>
 
 <script>
@@ -59,16 +53,12 @@
 
         computed:{
             statistiche(){
-                return this.$store.getters['ragazzi/statisticheattivita']
+                return this.$store.getters['ragazzi/statistichekm']
             },
 
             totale(){
-                return this.$store.getters['ragazzi/costoTotale']
+                return this.$store.getters['ragazzi/kmTotale']
             },
-
-            ragazzo(){
-                return this.$store.getters['ragazzi/ragazzo'];
-            }
 
         },
 

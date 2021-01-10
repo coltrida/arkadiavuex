@@ -50,7 +50,6 @@ export default {
     },
 
     loadoperatore(context, payload){
-        console.log(`${help().linkoperatori}/${payload}`)
         axios.get(`${help().linkoperatori}/${payload}`)
             .then(response => {
                 context.commit('loadoperatore', response.data);

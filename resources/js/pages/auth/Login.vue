@@ -24,6 +24,16 @@
             >Login
             </v-btn>
 
+            <v-alert
+                    border="right"
+                    color="red"
+                    dark
+                    v-if="error"
+                    style="margin-top: 30px"
+            >
+                {{error}}
+            </v-alert>
+
             <router-link to="/register">
                 <v-btn color="blue"> Registrati </v-btn>
             </router-link>
@@ -41,15 +51,24 @@
                 cansend: false,
                 form: {
                     email: '',
-                    password: ''
+                    password: '',
+                    error: ''
                 }
             }
+        },
+
+        created(){
+            this.clearLogin()
         },
 
         computed:{
             isLogged(){
                 return this.$store.getters['auth/isLogged']
-            }
+            },
+
+            error(){
+                return this.$store.getters['auth/error']
+            },
 
         },
 
@@ -62,6 +81,10 @@
         methods: {
             login(){
                 this.$store.dispatch('auth/login', this.form);
+            },
+
+            clearLogin(){
+                this.$store.commit('auth/clear')
             }
         }
     }

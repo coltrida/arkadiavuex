@@ -7,6 +7,7 @@
                         :key="item.to"
                         cols="12"
                         md="3"
+
                 >
                     <v-item v-slot="{ active, toggle }">
                         <v-hover v-slot="{ hover }">
@@ -23,7 +24,7 @@
 
                                         class="display-1 flex-grow-1 text-center"
                                 >
-                                    {{ item.name }}
+                                    {{ item.name }} - {{item.show}}
                                 </div>
                             </v-scroll-y-transition>
                         </v-card>
@@ -39,6 +40,7 @@
                         :key="item.to"
                         cols="12"
                         md="3"
+
                 >
                     <v-item v-slot="{ active, toggle }">
                         <v-hover v-slot="{ hover }">
@@ -55,7 +57,7 @@
                                     <div
                                             class="display-1 flex-grow-1 text-center" style="color: white; text-decoration: none"
                                     >
-                                        {{ item.name }}
+                                        {{ item.name }} - {{role}}
                                     </div>
 
                             </v-scroll-y-transition>
@@ -73,19 +75,31 @@
     export default {
         name: "Logged",
 
+
+        computed:{
+            role(){
+                return this.$store.getters['auth/role']
+            }
+        },
+
+        mounted(){
+            //this.role = this.$store.getters['auth/role']
+            console.log(this.role)
+        },
+
         data(){
             return{
                 elementi: [
-                    {name: 'Presenze Attività', to: 'attivitaragazzi'},
-                    {name: 'Presenze Operatori', to: 'presenzeoperatori'},
-                    {name: 'Inserisci Km', to: 'inseriscikm'},
-                    {name: 'Inserisci Vettura', to: 'inseriscivettura'},
+                    {name: 'Presenze Attività', to: 'attivitaragazzi', show: true},
+                    {name: 'Presenze Operatori', to: 'presenzeoperatori', show: true},
+                    {name: 'Inserisci Km', to: 'inseriscikm', show: true},
+                    {name: 'Inserisci Vettura', to: 'inseriscivettura', show: this.role},
                 ],
                 elementi2: [
-                    {name: 'Inserisci Attività', to: 'inserisciattivita'},
-                    {name: 'Inserisci Ragazzo', to: 'inserisciragazzo'},
-                    {name: 'Statistiche', to: 'statistiche'},
-                    {name: 'Associa e Log', to: 'associa'},
+                    {name: 'Inserisci Attività', to: 'inserisciattivita', show: this.role},
+                    {name: 'Inserisci Ragazzo', to: 'inserisciragazzo', show: this.role},
+                    {name: 'Statistiche', to: 'statistiche', show: this.role},
+                    {name: 'Associa e Log', to: 'associa', show: this.role},
                 ]
             }
 

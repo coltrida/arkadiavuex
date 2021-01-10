@@ -2182,8 +2182,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     isLogged: function isLogged() {
-      //return this.$store.getters['auth/isLogged']
-      return true;
+      return this.$store.getters['auth/isLogged']; // return true
     }
   }
 });
@@ -2270,35 +2269,54 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Logged",
+  computed: {
+    role: function role() {
+      return this.$store.getters['auth/role'];
+    }
+  },
+  mounted: function mounted() {
+    //this.role = this.$store.getters['auth/role']
+    console.log(this.role);
+  },
   data: function data() {
     return {
       elementi: [{
         name: 'Presenze Attività',
-        to: 'attivitaragazzi'
+        to: 'attivitaragazzi',
+        show: true
       }, {
         name: 'Presenze Operatori',
-        to: 'presenzeoperatori'
+        to: 'presenzeoperatori',
+        show: true
       }, {
         name: 'Inserisci Km',
-        to: 'inseriscikm'
+        to: 'inseriscikm',
+        show: true
       }, {
         name: 'Inserisci Vettura',
-        to: 'inseriscivettura'
+        to: 'inseriscivettura',
+        show: this.role
       }],
       elementi2: [{
         name: 'Inserisci Attività',
-        to: 'inserisciattivita'
+        to: 'inserisciattivita',
+        show: this.role
       }, {
         name: 'Inserisci Ragazzo',
-        to: 'inserisciragazzo'
+        to: 'inserisciragazzo',
+        show: this.role
       }, {
         name: 'Statistiche',
-        to: 'statistiche'
+        to: 'statistiche',
+        show: this.role
       }, {
         name: 'Associa e Log',
-        to: 'associa'
+        to: 'associa',
+        show: this.role
       }]
     };
   }
@@ -2435,6 +2453,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Login",
   data: function data() {
@@ -2442,13 +2470,20 @@ __webpack_require__.r(__webpack_exports__);
       cansend: false,
       form: {
         email: '',
-        password: ''
+        password: '',
+        error: ''
       }
     };
+  },
+  created: function created() {
+    this.clearLogin();
   },
   computed: {
     isLogged: function isLogged() {
       return this.$store.getters['auth/isLogged'];
+    },
+    error: function error() {
+      return this.$store.getters['auth/error'];
     }
   },
   watch: {
@@ -2459,6 +2494,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     login: function login() {
       this.$store.dispatch('auth/login', this.form);
+    },
+    clearLogin: function clearLogin() {
+      this.$store.commit('auth/clear');
     }
   }
 });
@@ -2514,10 +2552,64 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Register",
+  data: function data() {
+    return {
+      form: {
+        name: '',
+        email: '',
+        password: '',
+        password_confirm: ''
+      }
+    };
+  },
+  created: function created() {
+    this.clearLogin();
+  },
+  computed: {
+    isLogged: function isLogged() {
+      return this.$store.getters['auth/isLogged'];
+    },
+    error: function error() {
+      return this.$store.getters['auth/error'];
+    }
+  },
+  watch: {
+    isLogged: function isLogged() {
+      return this.$router.replace('/');
+    }
+  },
   methods: {
-    register: function register() {}
+    register: function register() {
+      this.$store.dispatch("auth/register", this.form);
+    },
+    clearLogin: function clearLogin() {
+      this.$store.commit('auth/clear');
+    }
   }
 });
 
@@ -40749,6 +40841,8 @@ var render = function() {
                                                         _vm._v(
                                                           "\n                                " +
                                                             _vm._s(item.name) +
+                                                            " - " +
+                                                            _vm._s(item.show) +
                                                             "\n                            "
                                                         )
                                                       ]
@@ -40843,6 +40937,8 @@ var render = function() {
                                                         _vm._v(
                                                           "\n                                    " +
                                                             _vm._s(item.name) +
+                                                            " - " +
+                                                            _vm._s(_vm.role) +
                                                             "\n                                "
                                                         )
                                                       ]
@@ -41102,6 +41198,17 @@ var render = function() {
             _vm._v("Login\n        ")
           ]),
           _vm._v(" "),
+          _vm.error
+            ? _c(
+                "v-alert",
+                {
+                  staticStyle: { "margin-top": "30px" },
+                  attrs: { border: "right", color: "red", dark: "" }
+                },
+                [_vm._v("\n            " + _vm._s(_vm.error) + "\n        ")]
+              )
+            : _vm._e(),
+          _vm._v(" "),
           _c(
             "router-link",
             { attrs: { to: "/register" } },
@@ -41156,20 +41263,75 @@ var render = function() {
         },
         [
           _c("v-text-field", {
-            attrs: { label: "Nome", type: "text", required: "" }
+            attrs: { label: "Nome", type: "text", required: "", dark: "" },
+            model: {
+              value: _vm.form.name,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "name", $$v)
+              },
+              expression: "form.name"
+            }
           }),
           _vm._v(" "),
           _c("v-text-field", {
-            attrs: { label: "E-mail", type: "email", required: "" }
+            attrs: { label: "E-mail", type: "email", required: "", dark: "" },
+            model: {
+              value: _vm.form.email,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "email", $$v)
+              },
+              expression: "form.email"
+            }
           }),
           _vm._v(" "),
           _c("v-text-field", {
-            attrs: { label: "Password", type: "password", required: "" }
+            attrs: {
+              label: "Password",
+              type: "password",
+              required: "",
+              autocomplete: "on",
+              dark: ""
+            },
+            model: {
+              value: _vm.form.password,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "password", $$v)
+              },
+              expression: "form.password"
+            }
+          }),
+          _vm._v(" "),
+          _c("v-text-field", {
+            attrs: {
+              label: "Ripeti Password",
+              type: "password",
+              required: "",
+              autocomplete: "on",
+              dark: ""
+            },
+            model: {
+              value: _vm.form.password_confirm,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "password_confirm", $$v)
+              },
+              expression: "form.password_confirm"
+            }
           }),
           _vm._v(" "),
           _c("v-btn", { attrs: { color: "green", type: "submit" } }, [
             _vm._v("Registrati\n        ")
           ]),
+          _vm._v(" "),
+          _vm.error
+            ? _c(
+                "v-alert",
+                {
+                  staticStyle: { "margin-top": "30px" },
+                  attrs: { border: "right", color: "red", dark: "" }
+                },
+                [_vm._v("\n            " + _vm._s(_vm.error) + "\n        ")]
+              )
+            : _vm._e(),
           _vm._v(" "),
           _c(
             "router-link",
@@ -104356,23 +104518,23 @@ var AssociaOperatoreOre = function AssociaOperatoreOre() {
 };
 
 var Log = function Log() {
-  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../pages/associa/log/Index */ "./resources/js/pages/associa/log/Index.vue"));
+  return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../pages/associa/log/Index */ "./resources/js/pages/associa/log/Index.vue"));
 };
 
 var StatKmragazzi = function StatKmragazzi() {
-  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../pages/statistiche/chilometriragazzi/Index */ "./resources/js/pages/statistiche/chilometriragazzi/Index.vue"));
+  return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ../pages/statistiche/chilometriragazzi/Index */ "./resources/js/pages/statistiche/chilometriragazzi/Index.vue"));
 };
 
 var StatKmvetture = function StatKmvetture() {
-  return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../pages/statistiche/chilometrivetture/Index */ "./resources/js/pages/statistiche/chilometrivetture/Index.vue"));
+  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../pages/statistiche/chilometrivetture/Index */ "./resources/js/pages/statistiche/chilometrivetture/Index.vue"));
 };
 
 var Statpresenzeoperatori = function Statpresenzeoperatori() {
-  return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../pages/statistiche/presenzeoperatori/Index */ "./resources/js/pages/statistiche/presenzeoperatori/Index.vue"));
+  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../pages/statistiche/presenzeoperatori/Index */ "./resources/js/pages/statistiche/presenzeoperatori/Index.vue"));
 };
 
 var Statpresenzeragazzi = function Statpresenzeragazzi() {
-  return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ../pages/statistiche/presenzeragazzi/Index */ "./resources/js/pages/statistiche/presenzeragazzi/Index.vue"));
+  return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../pages/statistiche/presenzeragazzi/Index */ "./resources/js/pages/statistiche/presenzeragazzi/Index.vue"));
 };
 
 var routes = [{
@@ -106513,6 +106675,15 @@ __webpack_require__.r(__webpack_exports__);
   login: function login(context, payload) {
     axios.post("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linklogin), payload).then(function (response) {
       context.commit('login', response.data);
+    })["catch"](function () {
+      context.commit('error', "Login fallito!");
+    });
+  },
+  register: function register(context, payload) {
+    axios.post("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkregister), payload).then(function (response) {
+      context.commit('register', response.data);
+    })["catch"](function () {
+      context.commit('error', "Registrazione fallita!");
     });
   },
   logout: function logout(context) {
@@ -106538,8 +106709,18 @@ __webpack_require__.r(__webpack_exports__);
   user: function user(state) {
     return state.user;
   },
+  role: function role(state) {
+    if (state.role == 1) {
+      return true;
+    } else {
+      return false;
+    }
+  },
   user_id: function user_id(state) {
     return state.user_id;
+  },
+  error: function error(state) {
+    return state.error;
   }
 });
 
@@ -106566,7 +106747,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       isLogged: false,
       user_id: '',
+      error: '',
       user: '',
+      role: '',
       oresettimanali: '',
       oresaldo: ''
     };
@@ -106594,10 +106777,30 @@ __webpack_require__.r(__webpack_exports__);
     state.user = payload.name;
     state.oresettimanali = payload.oresettimanali;
     state.oresaldo = payload.oresaldo;
+    state.role = payload.role;
+  },
+  register: function register(state, payload) {
+    state.isLogged = true;
+    state.user_id = payload.id;
+    state.user = payload.name;
+    state.oresettimanali = payload.oresettimanali;
+    state.oresaldo = payload.oresaldo;
+    state.role = payload.role;
   },
   logout: function logout(state) {
     state.isLogged = false;
     state.user_id = '';
+    state.user = '';
+    state.oresettimanali = '';
+    state.oresaldo = '';
+  },
+  error: function error(state, payload) {
+    state.error = payload;
+  },
+  clear: function clear(state) {
+    state.isLogged = false;
+    state.user_id = '';
+    state.error = '';
     state.user = '';
     state.oresettimanali = '';
     state.oresaldo = '';
@@ -106738,7 +106941,6 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   loadoperatore: function loadoperatore(context, payload) {
-    console.log("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkoperatori, "/").concat(payload));
     axios.get("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkoperatori, "/").concat(payload)).then(function (response) {
       context.commit('loadoperatore', response.data);
     });
@@ -106850,12 +107052,10 @@ __webpack_require__.r(__webpack_exports__);
     state.settimane = payload[1];
   },
   loadstatisticheoperatori: function loadstatisticheoperatori(state, payload) {
-    //console.log(payload[0]);
     state.statistiche = payload[0];
     state.totore = payload[1];
   },
   loadoperatore: function loadoperatore(state, payload) {
-    //console.log(payload)
     state.operatore = payload;
   },
   cleanstatistiche: function cleanstatistiche(state) {
@@ -106918,6 +107118,13 @@ __webpack_require__.r(__webpack_exports__);
     axios.get("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkragazzi, "/").concat(payload)).then(function (response) {
       context.commit('loadragazzo', response.data);
     });
+  },
+  loadstatistichekm: function loadstatistichekm(context, payload) {
+    //console.log(payload)
+    axios.post("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkchilometriragazzi), payload).then(function (response) {
+      //console.log(response.data)
+      context.commit('loadstatistichekm', response.data);
+    });
   }
 });
 
@@ -106947,6 +107154,12 @@ __webpack_require__.r(__webpack_exports__);
   },
   ragazzo: function ragazzo(state) {
     return state.ragazzo;
+  },
+  kmTotale: function kmTotale(state) {
+    return state.kmTotale;
+  },
+  statistichekm: function statistichekm(state) {
+    return state.statistichekm;
   }
 });
 
@@ -106974,7 +107187,9 @@ __webpack_require__.r(__webpack_exports__);
       ragazzi: [],
       attivita: [],
       statisticheattivita: [],
+      statistichekm: [],
       costoTotale: '',
+      kmTotale: '',
       ragazzo: ''
     };
   },
@@ -107025,17 +107240,23 @@ __webpack_require__.r(__webpack_exports__);
     state.attivita.splice(indice, 1);
   },
   loadstatisticheattivitaragazzi: function loadstatisticheattivitaragazzi(state, payload) {
-    //console.log('mutataion: '+  payload[0]);
     state.statisticheattivita = payload[0];
     state.costoTotale = payload[1];
   },
   cleanstatistiche: function cleanstatistiche(state) {
     state.statisticheattivita = [];
+    state.statistichekm = [];
     state.costoTotale = '';
+    state.kmTotale = '';
     state.ragazzo = '';
   },
   loadragazzo: function loadragazzo(state, payload) {
     state.ragazzo = payload;
+  },
+  loadstatistichekm: function loadstatistichekm(state, payload) {
+    //console.log(payload[0])
+    state.statistichekm = payload[0];
+    state.kmTotale = payload[1];
   }
 });
 
@@ -107067,6 +107288,11 @@ __webpack_require__.r(__webpack_exports__);
     axios["delete"]("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkvetture, "/").concat(payload.id)).then(function () {
       context.commit('eliminavettura', payload.indice);
     });
+  },
+  loadstatistiche: function loadstatistiche(context, payload) {
+    axios.post("".concat(Object(_helps_ts__WEBPACK_IMPORTED_MODULE_0__["default"])().linkchilometrivetture), payload).then(function (response) {
+      context.commit('loadstatistiche', response.data);
+    });
   }
 });
 
@@ -107084,6 +107310,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   vetture: function vetture(state) {
     return state.vetture;
+  },
+  statistiche: function statistiche(state) {
+    return state.statistiche;
+  },
+  totale: function totale(state) {
+    return state.totale;
   }
 });
 
@@ -107108,7 +107340,9 @@ __webpack_require__.r(__webpack_exports__);
   namespaced: true,
   state: function state() {
     return {
-      vetture: []
+      vetture: [],
+      statistiche: [],
+      totale: ''
     };
   },
   mutations: _mutations_js__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -107136,6 +107370,15 @@ __webpack_require__.r(__webpack_exports__);
   },
   eliminavettura: function eliminavettura(state, indice) {
     state.vetture.splice(indice, 1);
+  },
+  cleanstatistiche: function cleanstatistiche(state) {
+    state.statistiche = [];
+    state.totale = '';
+  },
+  loadstatistiche: function loadstatistiche(state, payload) {
+    //console.log(payload)
+    state.statistiche = payload[0];
+    state.totale = payload[1];
   }
 });
 

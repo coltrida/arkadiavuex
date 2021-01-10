@@ -54,5 +54,14 @@ export default {
             .then(response => {
                 context.commit('loadragazzo', response.data)
             })
-    }
+    },
+
+    loadstatistichekm(context, payload){
+        //console.log(payload)
+        axios.post(`${help().linkchilometriragazzi}`, payload)
+            .then(response => {
+                //console.log(response.data)
+                context.commit('loadstatistichekm', response.data)
+            })
+    },
 };

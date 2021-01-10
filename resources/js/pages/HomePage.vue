@@ -15,8 +15,8 @@
 
         computed:{
             isLogged(){
-                //return this.$store.getters['auth/isLogged']
-                return true
+                return this.$store.getters['auth/isLogged']
+               // return true
             }
         },
 

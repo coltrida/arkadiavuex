@@ -19,5 +19,13 @@ export default {
         return state.ragazzo;
     },
 
+    kmTotale(state) {
+        return state.kmTotale;
+    },
+
+    statistichekm(state) {
+        return state.statistichekm;
+    },
+
 
 };

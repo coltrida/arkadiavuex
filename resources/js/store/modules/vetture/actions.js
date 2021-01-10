@@ -19,5 +19,12 @@ export default {
             .then(() => {
                 context.commit('eliminavettura', payload.indice);
             })
+    },
+
+    loadstatistiche(context, payload){
+        axios.post(`${help().linkchilometrivetture}`, payload)
+            .then(response => {
+                context.commit('loadstatistiche', response.data)
+            })
     }
 };

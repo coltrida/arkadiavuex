@@ -61,18 +61,45 @@
       <change beforePath="$PROJECT_DIR$/../vocechiara/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vocechiara/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vocechiara/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vocechiara/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vocechiara/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../vocechiara/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/4.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/5.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/6.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/helps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/helps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/Logged.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Logged.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/statistiche/chilometriragazzi/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/statistiche/chilometriragazzi/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/statistiche/chilometrivetture/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/statistiche/chilometrivetture/Index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeragazzi/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeragazzi/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/ListaStatistiche.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/ListaStatistiche.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeragazzi/LIstaStatistiche.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeragazzi/LIstaStatistiche.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/auth/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/auth/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/auth/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/auth/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/auth/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/auth/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/auth/mutations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/store/modules/operatori/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/operatori/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/operatori/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/operatori/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/operatori/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/operatori/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/store/modules/operatori/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/operatori/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/ragazzi/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/ragazzi/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/store/modules/ragazzi/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/ragazzi/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/ragazzi/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/ragazzi/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/ragazzi/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/ragazzi/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/vetture/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/vetture/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/vetture/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/vetture/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/vetture/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/vetture/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/vetture/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/vetture/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/homevuex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homevuex.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,38 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/helps.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/actions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/mutations.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="14" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="26" column="29" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -130,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/Index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="102" column="86" selection-start-line="102" selection-start-column="86" selection-end-line="102" selection-end-column="86" />
+            <state relative-caret-position="102">
+              <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -139,23 +136,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/ListaStatistiche.vue">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/js/pages/Logged.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+            <state relative-caret-position="289">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
               <folding>
-                <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#v-item-group#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/getters.js">
+        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/auth/mutations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            <state relative-caret-position="323">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/auth/getters.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -174,9 +180,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>login</find>
-      <find>this.$router.replace</find>
-      <find>people</find>
       <find>annoOggi</find>
       <find>meseOggi</find>
       <find>linkragazzi</find>
@@ -204,6 +207,9 @@
       <find>linkchilometriragazzi</find>
       <find>linklog</find>
       <find>statistiche/operatori</find>
+      <find>ex4</find>
+      <find>operatore</find>
+      <find>chilometriVetture</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\coltrida\Documents\projects\LARAPROJECTS\vuexarkadia</dir>
@@ -213,6 +219,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/resources/js/store/modules/auth/actions.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/resources/js/pages/inserisciKm/ListaKm.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/resources/js/pages/inserisciKm/Index.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/resources/js/app.js" root0="SKIP_INSPECTION" />
@@ -225,16 +232,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/js/store/modules/associa/getters.js" />
-        <option value="$PROJECT_DIR$/resources/js/pages/inserisciAttivita/Index.vue" />
-        <option value="$PROJECT_DIR$/resources/js/pages/presenzeAttivita/ListaPresenze.vue" />
-        <option value="$PROJECT_DIR$/resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/associa/mutations.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/associa/actions.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/viaggi/index.js" />
-        <option value="$PROJECT_DIR$/resources/js/pages/inserisciKm/Index.vue" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/viaggi/actions.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/viaggi/getters.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/viaggi/mutations.js" />
         <option value="$PROJECT_DIR$/resources/js/pages/associa/operatoreore/ListaAssociazioni.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/associa/attivitaragazzo/Index.vue" />
@@ -248,34 +245,44 @@
         <option value="$PROJECT_DIR$/resources/js/store/modules/logs/getters.js" />
         <option value="$PROJECT_DIR$/resources/js/pages/associa/log/Index.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/NotLogged.vue" />
-        <option value="$PROJECT_DIR$/resources/js/pages/Logged.vue" />
-        <option value="$PROJECT_DIR$/resources/js/pages/auth/Login.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/presenzeAttivita/Index.vue" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/auth/index.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/auth/getters.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/auth/actions.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/auth/mutations.js" />
         <option value="$PROJECT_DIR$/resources/js/pages/presenzeOperatore/Index.vue" />
         <option value="$PROJECT_DIR$/resources/js/layout/TheHeader.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/inserisciKm/ListaKm.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/inserisciKm/Passeggeri.vue" />
-        <option value="$PROJECT_DIR$/resources/js/pages/HomePage.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/statistiche/Index.vue" />
-        <option value="$PROJECT_DIR$/resources/js/pages/statistiche/chilometriragazzi/Index.vue" />
         <option value="$PROJECT_DIR$/resources/js/Router/router.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/ragazzi/index.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/ragazzi/actions.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/ragazzi/mutations.js" />
-        <option value="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeragazzi/LIstaStatistiche.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeragazzi/Index.vue" />
         <option value="$PROJECT_DIR$/resources/js/helps.ts" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/ragazzi/getters.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/operatori/index.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/operatori/getters.js" />
-        <option value="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/Index.vue" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/vetture/index.js" />
+        <option value="$PROJECT_DIR$/resources/js/pages/statistiche/chilometrivetture/Index.vue" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/vetture/actions.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/vetture/getters.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/vetture/mutations.js" />
+        <option value="$PROJECT_DIR$/resources/js/pages/statistiche/chilometrivetture/Passeggeri.vue" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/ragazzi/index.js" />
+        <option value="$PROJECT_DIR$/resources/js/pages/statistiche/chilometriragazzi/Index.vue" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/ragazzi/actions.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/ragazzi/getters.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/ragazzi/mutations.js" />
+        <option value="$PROJECT_DIR$/resources/js/pages/statistiche/chilometriragazzi/ListaStatistiche.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/statistiche/chilometrivetture/ListaStatistiche.vue" />
         <option value="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/ListaStatistiche.vue" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/operatori/actions.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/operatori/mutations.js" />
+        <option value="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeragazzi/LIstaStatistiche.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/Index.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/HomePage.vue" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/auth/actions.js" />
+        <option value="$PROJECT_DIR$/resources/js/pages/auth/Login.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/auth/Register.vue" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/auth/index.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/auth/mutations.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/auth/getters.js" />
+        <option value="$PROJECT_DIR$/resources/js/pages/ItemMenu.vue" />
+        <option value="$PROJECT_DIR$/resources/js/pages/Logged.vue" />
       </list>
     </option>
   </component>
@@ -409,9 +416,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-5" />
-    <option name="y" value="7" />
-    <option name="width" value="1509" />
-    <option name="height" value="1032" />
+    <option name="y" value="5" />
+    <option name="width" value="1510" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -421,7 +428,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -452,47 +458,6 @@
               <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="associa" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="associa" type="462c0819:PsiDirectoryNode" />
-              <item name="attivitaragazzo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiche" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiche" type="462c0819:PsiDirectoryNode" />
-              <item name="presenzeoperatori" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="Router" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -510,28 +475,20 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="operatori" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="ragazzi" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../statistichearkadia" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../realtimeapp3" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -539,15 +496,15 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.1.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\coltrida\Documents\projects\LARAPROJECTS\vuexarkadia\resources\js\Router" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\coltrida\Documents\projects\LARAPROJECTS\vuexarkadia\resources\js\pages\statistiche\chilometriragazzi" />
       <recent name="C:\Users\coltrida\Documents\projects\LARAPROJECTS\vuexarkadia\resources\js\pages\statistiche\presenzeragazzi" />
       <recent name="C:\Users\coltrida\Documents\projects\LARAPROJECTS\vuexarkadia\resources\js\pages\statistiche\presenzeoperatori" />
       <recent name="C:\Users\coltrida\Documents\projects\LARAPROJECTS\vuexarkadia\resources\js\pages\statistiche\chilometrivetture" />
       <recent name="C:\Users\coltrida\Documents\projects\LARAPROJECTS\vuexarkadia\resources\js\store\modules\auth" />
-      <recent name="C:\Users\coltrida\Documents\projects\LARAPROJECTS\vuexarkadia\resources\js\store\modules\logs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\coltrida\Documents\projects\LARAPROJECTS\vuexarkadia\resources\js\Router" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -584,18 +541,20 @@
       <workItem from="1609925939419" duration="29004000" />
       <workItem from="1610011954167" duration="17344000" />
       <workItem from="1610093459334" duration="20318000" />
-      <workItem from="1610181095644" duration="28747000" />
+      <workItem from="1610181095644" duration="31328000" />
+      <workItem from="1610235804164" duration="1666000" />
+      <workItem from="1610275106048" duration="13650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145865000" />
+    <option name="totallyTimeSpent" value="163762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19060403" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2033557" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -610,7 +569,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013423" side_tool="true" weight="0.20251396" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4986577" visible="true" weight="0.19692737" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4986577" visible="true" weight="0.23324022" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -623,88 +582,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/viaggi/mutations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/viaggi/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/viaggi/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/viaggi/getters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/associa/operatoreore/ListaAssociazioni.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/logs/getters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/logs/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciKm/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/logs/mutations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/store/modules/logs/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -763,68 +640,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciAttivita/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#lista-attivita#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciAttivita/ListaAttivita.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/auth/Login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/pages/presenzeAttivita/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="176" column="16" selection-start-line="176" selection-start-column="16" selection-end-line="177" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/auth/mutations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/auth/getters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/auth/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/auth/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -839,13 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="108" column="29" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciKm/Passeggeri.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -865,37 +677,6 @@
           <caret line="7" column="33" lean-forward="true" selection-end-line="69" />
           <folding>
             <element signature="n#style#0;n#v-item-group#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/Logged.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1173">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#v-item-group#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/chilometriragazzi/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/chilometrivetture/Index.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/Router/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#78#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -930,45 +711,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/presenzeragazzi/LIstaStatistiche.vue">
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="34" lean-forward="true" selection-end-line="80" />
+        <state relative-caret-position="187">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="14" selection-end-column="25" />
           <folding>
-            <element signature="n#style#0;n#v-simple-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/ragazzi/mutations.js">
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciKm/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/HomePage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        <state relative-caret-position="68">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/presenzeragazzi/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="85" selection-end-column="10" />
+        <state relative-caret-position="272">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="39" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#div#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/vetture/getters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/vetture/mutations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciKm/Passeggeri.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="58" lean-forward="true" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/chilometrivetture/Passeggeri.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/vetture/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/ragazzi/mutations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/store/modules/ragazzi/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="36" />
+        <state relative-caret-position="187">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="25" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -977,15 +792,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/store/modules/ragazzi/getters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/store/modules/ragazzi/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="388">
+          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/vetture/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/chilometrivetture/ListaStatistiche.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/mutations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -996,54 +838,183 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/ListaStatistiche.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+        <state relative-caret-position="-170">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/actions.js">
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/presenzeragazzi/LIstaStatistiche.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="102" column="86" selection-start-line="102" selection-start-column="86" selection-end-line="102" selection-end-column="86" />
+        <state relative-caret-position="153">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#v-simple-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/helps.ts">
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciAttivita/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="69" />
+        <state relative-caret-position="331">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#lista-attivita#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/index.js">
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/inserisciAttivita/ListaAttivita.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#template#0;n#v-simple-table#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/HomePage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/auth/Register.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#v-alert#0;n#v-form#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/auth/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/auth/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="61" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#v-alert#0;n#v-form#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/Router/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#78#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/auth/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="14" selection-end-column="25" />
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/mutations.js">
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/auth/mutations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+        <state relative-caret-position="323">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/auth/getters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/chilometriragazzi/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#v-select#1;n#v-form#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/chilometriragazzi/ListaStatistiche.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/chilometrivetture/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#v-select#1;n#v-form#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/helps.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/statistiche/presenzeoperatori/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#v-container#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/ItemMenu.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/pages/Logged.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="n#style#0;n#v-item-group#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

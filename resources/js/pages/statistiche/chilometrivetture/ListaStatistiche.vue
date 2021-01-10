@@ -9,7 +9,13 @@
                         Giorno
                     </th>
                     <th class="text-left">
-                        Ore
+                        km percorsi
+                    </th>
+                    <th class="text-left">
+                        Operatore
+                    </th>
+                    <th class="text-left">
+                        Passeggeri
                     </th>
                 </tr>
                 </thead>
@@ -19,24 +25,20 @@
                         :key="ele.id"
                 >
                     <td>{{ ele.giorno }}</td>
-                    <td>{{ ele.ore }}</td>
+                    <td>{{ ele.kmPercorsi }}</td>
+                    <td>{{ ele.operatore }}</td>
+                    <td><passeggeri :passeggeri="ele.passeggeri"></passeggeri></td>
                 </tr>
                 </tbody>
             </template>
         </v-simple-table>
 
-        <section v-if="totore">
+        <section v-if="totale">
             <v-alert
                     color="blue-grey"
                     dark
             >
-                Totale Ore: {{ totore }}
-            </v-alert>
-            <v-alert
-                    color="blue accent-4"
-                    dark
-            >
-                Saldo Ore: {{ operatore.oresaldo }}
+                Totale Ore: {{ totale }}
             </v-alert>
         </section>
 
@@ -44,20 +46,19 @@
 </template>
 
 <script>
+    import Passeggeri from './Passeggeri'
     export default {
         name: "LIstaStatistiche",
 
+        components: { Passeggeri },
+
         computed:{
             statistiche(){
-                return this.$store.getters['operatori/statistiche']
+                return this.$store.getters['vetture/statistiche']
             },
 
-            totore(){
-                return this.$store.getters['operatori/totore']
-            },
-
-            operatore(){
-                return this.$store.getters['operatori/operatore']
+            totale(){
+                return this.$store.getters['vetture/totale']
             },
 
         },

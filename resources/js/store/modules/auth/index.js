@@ -8,7 +8,9 @@ export default {
         return {
             isLogged: false,
             user_id: '',
+            error: '',
             user: '',
+            role: '',
             oresettimanali: '',
             oresaldo: ''
         };

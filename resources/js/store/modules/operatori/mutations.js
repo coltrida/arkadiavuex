@@ -26,13 +26,11 @@ export default {
     },
 
     loadstatisticheoperatori(state, payload){
-        //console.log(payload[0]);
         state.statistiche = payload[0];
         state.totore = payload[1];
     },
 
     loadoperatore(state, payload){
-        //console.log(payload)
         state.operatore = payload;
     },
 

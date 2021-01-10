@@ -67,11 +67,11 @@
             this.loadSettimane();
         },
 
-      /*  watch:{
+        watch:{
             settimane(value){
                 return this.form.settimana = value[this.settimanaAttuale]
             }
-        },*/
+        },
 
         data() {
             return {

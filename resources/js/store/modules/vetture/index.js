@@ -6,7 +6,9 @@ export default {
     namespaced: true,
     state() {
         return {
-            vetture: []
+            vetture: [],
+            statistiche: [],
+            totale: ''
         };
     },
     mutations,

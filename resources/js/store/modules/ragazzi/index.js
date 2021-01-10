@@ -9,7 +9,9 @@ export default {
             ragazzi: [],
             attivita: [],
             statisticheattivita: [],
+            statistichekm: [],
             costoTotale: '',
+            kmTotale: '',
             ragazzo: ''
         };
     },
