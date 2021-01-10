@@ -2271,16 +2271,172 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Logged",
   computed: {
     role: function role() {
       return this.$store.getters['auth/role'];
     }
-  },
-  mounted: function mounted() {
-    //this.role = this.$store.getters['auth/role']
-    console.log(this.role);
   },
   data: function data() {
     return {
@@ -40788,188 +40944,695 @@ var render = function() {
         [
           _c(
             "v-row",
-            _vm._l(_vm.elementi, function(item) {
-              return _c(
+            [
+              _c(
                 "v-col",
-                { key: item.to, attrs: { cols: "12", md: "3" } },
+                { attrs: { cols: "12", md: "3" } },
                 [
                   _c("v-item", {
-                    scopedSlots: _vm._u(
-                      [
-                        {
-                          key: "default",
-                          fn: function(ref) {
-                            var active = ref.active
-                            var toggle = ref.toggle
-                            return [
-                              _c("v-hover", {
-                                scopedSlots: _vm._u(
-                                  [
-                                    {
-                                      key: "default",
-                                      fn: function(ref) {
-                                        var hover = ref.hover
-                                        return [
-                                          _c(
-                                            "router-link",
-                                            {
-                                              staticClass: "link",
-                                              attrs: { to: item.to }
-                                            },
-                                            [
-                                              _c(
-                                                "v-card",
-                                                {
-                                                  staticClass:
-                                                    "d-flex align-center grey darken-3 fill-height { 'on-hover': hover }",
-                                                  attrs: {
-                                                    height: "200",
-                                                    dark: "",
-                                                    elevation: hover ? 12 : 2
-                                                  },
-                                                  on: { click: toggle }
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function(ref) {
+                          var active = ref.active
+                          var toggle = ref.toggle
+                          return [
+                            _c("v-hover", {
+                              scopedSlots: _vm._u(
+                                [
+                                  {
+                                    key: "default",
+                                    fn: function(ref) {
+                                      var hover = ref.hover
+                                      return [
+                                        _c(
+                                          "router-link",
+                                          {
+                                            staticClass: "link",
+                                            attrs: { to: "attivitaragazzi" }
+                                          },
+                                          [
+                                            _c(
+                                              "v-card",
+                                              {
+                                                staticClass:
+                                                  "d-flex align-center grey darken-3 fill-height { 'on-hover': hover }",
+                                                attrs: {
+                                                  height: "200",
+                                                  dark: "",
+                                                  elevation: hover ? 12 : 2
                                                 },
-                                                [
-                                                  _c("v-scroll-y-transition", [
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "display-1 flex-grow-1 text-center"
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                " +
-                                                            _vm._s(item.name) +
-                                                            " - " +
-                                                            _vm._s(item.show) +
-                                                            "\n                            "
-                                                        )
-                                                      ]
-                                                    )
-                                                  ])
-                                                ],
-                                                1
-                                              )
-                                            ],
-                                            1
-                                          )
-                                        ]
-                                      }
+                                                on: { click: toggle }
+                                              },
+                                              [
+                                                _c("v-scroll-y-transition", [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "display-1 flex-grow-1 text-center"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                Presenze Attività\n                            "
+                                                      )
+                                                    ]
+                                                  )
+                                                ])
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ]
                                     }
-                                  ],
-                                  null,
-                                  true
-                                )
-                              })
-                            ]
-                          }
+                                  }
+                                ],
+                                null,
+                                true
+                              )
+                            })
+                          ]
                         }
-                      ],
-                      null,
-                      true
-                    )
+                      }
+                    ])
                   })
                 ],
                 1
-              )
-            }),
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "12", md: "3" } },
+                [
+                  _c("v-item", {
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function(ref) {
+                          var active = ref.active
+                          var toggle = ref.toggle
+                          return [
+                            _c("v-hover", {
+                              scopedSlots: _vm._u(
+                                [
+                                  {
+                                    key: "default",
+                                    fn: function(ref) {
+                                      var hover = ref.hover
+                                      return [
+                                        _c(
+                                          "router-link",
+                                          {
+                                            staticClass: "link",
+                                            attrs: { to: "presenzeoperatori" }
+                                          },
+                                          [
+                                            _c(
+                                              "v-card",
+                                              {
+                                                staticClass:
+                                                  "d-flex align-center grey darken-3 fill-height { 'on-hover': hover }",
+                                                attrs: {
+                                                  height: "200",
+                                                  dark: "",
+                                                  elevation: hover ? 12 : 2
+                                                },
+                                                on: { click: toggle }
+                                              },
+                                              [
+                                                _c("v-scroll-y-transition", [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "display-1 flex-grow-1 text-center"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                        Presenze Operatori\n                                    "
+                                                      )
+                                                    ]
+                                                  )
+                                                ])
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ]
+                                    }
+                                  }
+                                ],
+                                null,
+                                true
+                              )
+                            })
+                          ]
+                        }
+                      }
+                    ])
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "12", md: "3" } },
+                [
+                  _c("v-item", {
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function(ref) {
+                          var active = ref.active
+                          var toggle = ref.toggle
+                          return [
+                            _c("v-hover", {
+                              scopedSlots: _vm._u(
+                                [
+                                  {
+                                    key: "default",
+                                    fn: function(ref) {
+                                      var hover = ref.hover
+                                      return [
+                                        _c(
+                                          "router-link",
+                                          {
+                                            staticClass: "link",
+                                            attrs: { to: "inseriscikm" }
+                                          },
+                                          [
+                                            _c(
+                                              "v-card",
+                                              {
+                                                staticClass:
+                                                  "d-flex align-center grey darken-3 fill-height { 'on-hover': hover }",
+                                                attrs: {
+                                                  height: "200",
+                                                  dark: "",
+                                                  elevation: hover ? 12 : 2
+                                                },
+                                                on: { click: toggle }
+                                              },
+                                              [
+                                                _c("v-scroll-y-transition", [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "display-1 flex-grow-1 text-center"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                        Inserisci Km\n                                    "
+                                                      )
+                                                    ]
+                                                  )
+                                                ])
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ]
+                                    }
+                                  }
+                                ],
+                                null,
+                                true
+                              )
+                            })
+                          ]
+                        }
+                      }
+                    ])
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _vm.role
+                ? _c(
+                    "v-col",
+                    { attrs: { cols: "12", md: "3" } },
+                    [
+                      _c("v-item", {
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "default",
+                              fn: function(ref) {
+                                var active = ref.active
+                                var toggle = ref.toggle
+                                return [
+                                  _c("v-hover", {
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "default",
+                                          fn: function(ref) {
+                                            var hover = ref.hover
+                                            return [
+                                              _c(
+                                                "router-link",
+                                                {
+                                                  staticClass: "link",
+                                                  attrs: {
+                                                    to: "inseriscivettura"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      staticClass:
+                                                        "d-flex align-center grey darken-3 fill-height { 'on-hover': hover }",
+                                                      attrs: {
+                                                        height: "200",
+                                                        dark: "",
+                                                        elevation: hover
+                                                          ? 12
+                                                          : 2
+                                                      },
+                                                      on: { click: toggle }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-scroll-y-transition",
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "display-1 flex-grow-1 text-center"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "\n                                        Inserisci Vettura\n                                    "
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      null,
+                                      true
+                                    )
+                                  })
+                                ]
+                              }
+                            }
+                          ],
+                          null,
+                          false,
+                          3222652866
+                        )
+                      })
+                    ],
+                    1
+                  )
+                : _vm._e()
+            ],
             1
           ),
           _vm._v(" "),
           _c(
             "v-row",
-            _vm._l(_vm.elementi2, function(item) {
-              return _c(
-                "v-col",
-                { key: item.to, attrs: { cols: "12", md: "3" } },
-                [
-                  _c("v-item", {
-                    scopedSlots: _vm._u(
-                      [
-                        {
-                          key: "default",
-                          fn: function(ref) {
-                            var active = ref.active
-                            var toggle = ref.toggle
-                            return [
-                              _c("v-hover", {
-                                scopedSlots: _vm._u(
-                                  [
-                                    {
-                                      key: "default",
-                                      fn: function(ref) {
-                                        var hover = ref.hover
-                                        return [
-                                          _c(
-                                            "router-link",
-                                            {
-                                              staticClass: "link",
-                                              attrs: { to: item.to }
-                                            },
-                                            [
+            [
+              _vm.role
+                ? _c(
+                    "v-col",
+                    { attrs: { cols: "12", md: "3" } },
+                    [
+                      _c("v-item", {
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "default",
+                              fn: function(ref) {
+                                var active = ref.active
+                                var toggle = ref.toggle
+                                return [
+                                  _c("v-hover", {
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "default",
+                                          fn: function(ref) {
+                                            var hover = ref.hover
+                                            return [
                                               _c(
-                                                "v-card",
+                                                "router-link",
                                                 {
-                                                  staticClass:
-                                                    "d-flex align-center grey darken-3 fill-height { 'on-hover': hover }",
+                                                  staticClass: "link",
                                                   attrs: {
-                                                    height: "200",
-                                                    dark: "",
-                                                    elevation: hover ? 12 : 2
-                                                  },
-                                                  on: { click: toggle }
+                                                    to: "inserisciattivita"
+                                                  }
                                                 },
                                                 [
-                                                  _c("v-scroll-y-transition", [
-                                                    _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "display-1 flex-grow-1 text-center",
-                                                        staticStyle: {
-                                                          color: "white",
-                                                          "text-decoration":
-                                                            "none"
-                                                        }
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      staticClass:
+                                                        "d-flex align-center grey darken-3 fill-height { 'on-hover': hover }",
+                                                      attrs: {
+                                                        height: "200",
+                                                        dark: "",
+                                                        elevation: hover
+                                                          ? 12
+                                                          : 2
                                                       },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                    " +
-                                                            _vm._s(item.name) +
-                                                            " - " +
-                                                            _vm._s(_vm.role) +
-                                                            "\n                                "
-                                                        )
-                                                      ]
-                                                    )
-                                                  ])
+                                                      on: { click: toggle }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-scroll-y-transition",
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "display-1 flex-grow-1 text-center"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "\n                                        Inserisci Attività\n                                    "
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
                                                 ],
                                                 1
                                               )
-                                            ],
-                                            1
-                                          )
-                                        ]
-                                      }
-                                    }
-                                  ],
-                                  null,
-                                  true
-                                )
-                              })
-                            ]
-                          }
-                        }
-                      ],
-                      null,
-                      true
-                    )
-                  })
-                ],
-                1
-              )
-            }),
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      null,
+                                      true
+                                    )
+                                  })
+                                ]
+                              }
+                            }
+                          ],
+                          null,
+                          false,
+                          3600062435
+                        )
+                      })
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.role
+                ? _c(
+                    "v-col",
+                    { attrs: { cols: "12", md: "3" } },
+                    [
+                      _c("v-item", {
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "default",
+                              fn: function(ref) {
+                                var active = ref.active
+                                var toggle = ref.toggle
+                                return [
+                                  _c("v-hover", {
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "default",
+                                          fn: function(ref) {
+                                            var hover = ref.hover
+                                            return [
+                                              _c(
+                                                "router-link",
+                                                {
+                                                  staticClass: "link",
+                                                  attrs: {
+                                                    to: "inserisciragazzo"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      staticClass:
+                                                        "d-flex align-center grey darken-3 fill-height { 'on-hover': hover }",
+                                                      attrs: {
+                                                        height: "200",
+                                                        dark: "",
+                                                        elevation: hover
+                                                          ? 12
+                                                          : 2
+                                                      },
+                                                      on: { click: toggle }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-scroll-y-transition",
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "display-1 flex-grow-1 text-center"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "\n                                        Inserisci Ragazzo\n                                    "
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      null,
+                                      true
+                                    )
+                                  })
+                                ]
+                              }
+                            }
+                          ],
+                          null,
+                          false,
+                          1622926626
+                        )
+                      })
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.role
+                ? _c(
+                    "v-col",
+                    { attrs: { cols: "12", md: "3" } },
+                    [
+                      _c("v-item", {
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "default",
+                              fn: function(ref) {
+                                var active = ref.active
+                                var toggle = ref.toggle
+                                return [
+                                  _c("v-hover", {
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "default",
+                                          fn: function(ref) {
+                                            var hover = ref.hover
+                                            return [
+                                              _c(
+                                                "router-link",
+                                                {
+                                                  staticClass: "link",
+                                                  attrs: { to: "statistiche" }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      staticClass:
+                                                        "d-flex align-center grey darken-3 fill-height { 'on-hover': hover }",
+                                                      attrs: {
+                                                        height: "200",
+                                                        dark: "",
+                                                        elevation: hover
+                                                          ? 12
+                                                          : 2
+                                                      },
+                                                      on: { click: toggle }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-scroll-y-transition",
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "display-1 flex-grow-1 text-center"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "\n                                        Statistiche\n                                    "
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      null,
+                                      true
+                                    )
+                                  })
+                                ]
+                              }
+                            }
+                          ],
+                          null,
+                          false,
+                          2974197282
+                        )
+                      })
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.role
+                ? _c(
+                    "v-col",
+                    { attrs: { cols: "12", md: "3" } },
+                    [
+                      _c("v-item", {
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "default",
+                              fn: function(ref) {
+                                var active = ref.active
+                                var toggle = ref.toggle
+                                return [
+                                  _c("v-hover", {
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "default",
+                                          fn: function(ref) {
+                                            var hover = ref.hover
+                                            return [
+                                              _c(
+                                                "router-link",
+                                                {
+                                                  staticClass: "link",
+                                                  attrs: { to: "associa" }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      staticClass:
+                                                        "d-flex align-center grey darken-3 fill-height { 'on-hover': hover }",
+                                                      attrs: {
+                                                        height: "200",
+                                                        dark: "",
+                                                        elevation: hover
+                                                          ? 12
+                                                          : 2
+                                                      },
+                                                      on: { click: toggle }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-scroll-y-transition",
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "display-1 flex-grow-1 text-center"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "\n                                        Associa e Log\n                                    "
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      null,
+                                      true
+                                    )
+                                  })
+                                ]
+                              }
+                            }
+                          ],
+                          null,
+                          false,
+                          1490583843
+                        )
+                      })
+                    ],
+                    1
+                  )
+                : _vm._e()
+            ],
             1
           )
         ],

@@ -3,15 +3,12 @@
         <v-container>
             <v-row>
                 <v-col
-                        v-for="item in elementi"
-                        :key="item.to"
                         cols="12"
                         md="3"
-
                 >
                     <v-item v-slot="{ active, toggle }">
                         <v-hover v-slot="{ hover }">
-                            <router-link :to="item.to" class="link">
+                            <router-link to="attivitaragazzi" class="link">
                         <v-card
                                 class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
                                 height="200"
@@ -24,10 +21,92 @@
 
                                         class="display-1 flex-grow-1 text-center"
                                 >
-                                    {{ item.name }} - {{item.show}}
+                                    Presenze Attività
                                 </div>
                             </v-scroll-y-transition>
                         </v-card>
+                            </router-link>
+                        </v-hover>
+                    </v-item>
+                </v-col>
+                <v-col
+                        cols="12"
+                        md="3"
+                >
+                    <v-item v-slot="{ active, toggle }">
+                        <v-hover v-slot="{ hover }">
+                            <router-link to="presenzeoperatori" class="link">
+                                <v-card
+                                        class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
+                                        height="200"
+                                        @click="toggle"
+                                        dark
+                                        :elevation="hover ? 12 : 2"
+                                >
+                                    <v-scroll-y-transition>
+                                        <div
+
+                                                class="display-1 flex-grow-1 text-center"
+                                        >
+                                            Presenze Operatori
+                                        </div>
+                                    </v-scroll-y-transition>
+                                </v-card>
+                            </router-link>
+                        </v-hover>
+                    </v-item>
+                </v-col>
+                <v-col
+                        cols="12"
+                        md="3"
+                >
+                    <v-item v-slot="{ active, toggle }">
+                        <v-hover v-slot="{ hover }">
+                            <router-link to="inseriscikm" class="link">
+                                <v-card
+                                        class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
+                                        height="200"
+                                        @click="toggle"
+                                        dark
+                                        :elevation="hover ? 12 : 2"
+                                >
+                                    <v-scroll-y-transition>
+                                        <div
+
+                                                class="display-1 flex-grow-1 text-center"
+                                        >
+                                            Inserisci Km
+                                        </div>
+                                    </v-scroll-y-transition>
+                                </v-card>
+                            </router-link>
+                        </v-hover>
+                    </v-item>
+                </v-col>
+                <v-col
+                        cols="12"
+                        md="3"
+                        v-if="role"
+                >
+                    <v-item v-slot="{ active, toggle }">
+                        <v-hover v-slot="{ hover }">
+                            <router-link to="inseriscivettura" class="link">
+                                <v-card
+                                        class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
+                                        height="200"
+                                        @click="toggle"
+                                        dark
+                                        :elevation="hover ? 12 : 2"
+                                >
+                                    <v-scroll-y-transition>
+                                        <div
+
+                                                class="display-1 flex-grow-1 text-center"
+                                        >
+                                            Inserisci Vettura
+                                        </div>
+                                    </v-scroll-y-transition>
+                                </v-card>
                             </router-link>
                         </v-hover>
                     </v-item>
@@ -36,32 +115,113 @@
 
             <v-row>
                 <v-col
-                        v-for="item in elementi2"
-                        :key="item.to"
                         cols="12"
                         md="3"
-
+                        v-if="role"
                 >
                     <v-item v-slot="{ active, toggle }">
                         <v-hover v-slot="{ hover }">
-                            <router-link :to="item.to" class="link">
-                        <v-card
-                                class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
-                                height="200"
-                                @click="toggle"
-                                dark
-                                :elevation="hover ? 12 : 2"
-                        >
-                            <v-scroll-y-transition>
+                            <router-link to="inserisciattivita" class="link">
+                                <v-card
+                                        class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
+                                        height="200"
+                                        @click="toggle"
+                                        dark
+                                        :elevation="hover ? 12 : 2"
+                                >
+                                    <v-scroll-y-transition>
+                                        <div
 
-                                    <div
-                                            class="display-1 flex-grow-1 text-center" style="color: white; text-decoration: none"
-                                    >
-                                        {{ item.name }} - {{role}}
-                                    </div>
+                                                class="display-1 flex-grow-1 text-center"
+                                        >
+                                            Inserisci Attività
+                                        </div>
+                                    </v-scroll-y-transition>
+                                </v-card>
+                            </router-link>
+                        </v-hover>
+                    </v-item>
+                </v-col>
+                <v-col
+                        cols="12"
+                        md="3"
+                        v-if="role"
+                >
+                    <v-item v-slot="{ active, toggle }">
+                        <v-hover v-slot="{ hover }">
+                            <router-link to="inserisciragazzo" class="link">
+                                <v-card
+                                        class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
+                                        height="200"
+                                        @click="toggle"
+                                        dark
+                                        :elevation="hover ? 12 : 2"
+                                >
+                                    <v-scroll-y-transition>
+                                        <div
 
-                            </v-scroll-y-transition>
-                        </v-card>
+                                                class="display-1 flex-grow-1 text-center"
+                                        >
+                                            Inserisci Ragazzo
+                                        </div>
+                                    </v-scroll-y-transition>
+                                </v-card>
+                            </router-link>
+                        </v-hover>
+                    </v-item>
+                </v-col>
+                <v-col
+                        cols="12"
+                        md="3"
+                        v-if="role"
+                >
+                    <v-item v-slot="{ active, toggle }">
+                        <v-hover v-slot="{ hover }">
+                            <router-link to="statistiche" class="link">
+                                <v-card
+                                        class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
+                                        height="200"
+                                        @click="toggle"
+                                        dark
+                                        :elevation="hover ? 12 : 2"
+                                >
+                                    <v-scroll-y-transition>
+                                        <div
+
+                                                class="display-1 flex-grow-1 text-center"
+                                        >
+                                            Statistiche
+                                        </div>
+                                    </v-scroll-y-transition>
+                                </v-card>
+                            </router-link>
+                        </v-hover>
+                    </v-item>
+                </v-col>
+                <v-col
+                        cols="12"
+                        md="3"
+                        v-if="role"
+                >
+                    <v-item v-slot="{ active, toggle }">
+                        <v-hover v-slot="{ hover }">
+                            <router-link to="associa" class="link">
+                                <v-card
+                                        class="d-flex align-center grey darken-3 fill-height { 'on-hover': hover }"
+                                        height="200"
+                                        @click="toggle"
+                                        dark
+                                        :elevation="hover ? 12 : 2"
+                                >
+                                    <v-scroll-y-transition>
+                                        <div
+
+                                                class="display-1 flex-grow-1 text-center"
+                                        >
+                                            Associa e Log
+                                        </div>
+                                    </v-scroll-y-transition>
+                                </v-card>
                             </router-link>
                         </v-hover>
                     </v-item>
@@ -80,11 +240,6 @@
             role(){
                 return this.$store.getters['auth/role']
             }
-        },
-
-        mounted(){
-            //this.role = this.$store.getters['auth/role']
-            console.log(this.role)
         },
 
         data(){
