@@ -61,6 +61,7 @@
       <change beforePath="$PROJECT_DIR$/../vocechiara/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vocechiara/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vocechiara/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vocechiara/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vocechiara/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../vocechiara/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,17 +76,7 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/js/helps.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -138,16 +129,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/resources/js/store/modules/auth/actions.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/resources/js/store/modules/viaggi/actions.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/resources/js/pages/inserisciKm/ListaKm.vue" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/resources/js/pages/inserisciKm/Index.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/resources/js/app.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/resources/js/pages/presenzeAttivita/Index.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/resources/js/pages/associa/attivitaragazzo/Index.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/actions.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/resources/js/pages/inserisciKm/Index.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/resources/js/pages/inserisciKm/ListaKm.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/resources/js/store/modules/ragazzi/actions.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/resources/views/homevuex.blade.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/resources/js/store/modules/operatori/actions.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/resources/js/pages/associa/attivitaragazzo/Index.vue" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/resources/js/store/modules/auth/actions.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/resources/js/store/modules/viaggi/actions.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/resources/js/pages/presenzeAttivita/Index.vue" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -371,46 +362,7 @@
               <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="inserisciKm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="Router" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuexarkadia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuexarkadia" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="viaggi" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -485,7 +437,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183404000" />
+    <option name="totallyTimeSpent" value="183423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -811,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/layout/TheSpinner.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/pages/auth/Login.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -941,6 +886,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/layout/TheSpinner.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
         </state>
       </provider>
     </entry>
