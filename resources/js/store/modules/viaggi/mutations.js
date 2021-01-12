@@ -9,5 +9,9 @@ export default {
 
     eliminaviaggio(state, indice){
         state.viaggi.splice(indice, 1)
-    }
+    },
+
+    load(state, payload) {
+        state.load = payload;
+    },
 };

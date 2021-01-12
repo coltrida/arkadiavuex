@@ -18,11 +18,18 @@
                     dark
             ></v-text-field>
 
-            <v-btn
-                    color="green"
-                    type="submit"
-            >Login
-            </v-btn>
+            <section v-if="!isLogged">
+                <v-btn
+                        color="green"
+                        type="submit"
+                >Login
+                </v-btn>
+                <router-link to="/register">
+                    <v-btn color="blue"> Registrati </v-btn>
+                </router-link>
+            </section>
+
+
 
             <v-alert
                     border="right"
@@ -34,17 +41,16 @@
                 {{error}}
             </v-alert>
 
-            <router-link to="/register">
-                <v-btn color="blue"> Registrati </v-btn>
-            </router-link>
-
         </v-form>
     </v-container>
 </template>
 
 <script>
+    import TheSpinner from '../../layout/TheSpinner'
     export default {
         name: "Login",
+
+        components: { TheSpinner },
 
         data(){
             return{
@@ -64,6 +70,7 @@
         computed:{
             isLogged(){
                 return this.$store.getters['auth/isLogged']
+                //return true
             },
 
             error(){
@@ -80,7 +87,9 @@
 
         methods: {
             login(){
-                this.$store.dispatch('auth/login', this.form);
+                //this.isLoad = true;
+                this.$store.dispatch('auth/login', this.form)
+                    .then();
             },
 
             clearLogin(){

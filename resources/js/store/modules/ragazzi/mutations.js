@@ -56,4 +56,8 @@ export default {
         state.statistichekm = payload[0];
         state.kmTotale = payload[1];
     },
+
+    load(state, newvalue){
+        state.load = newvalue
+    }
 };

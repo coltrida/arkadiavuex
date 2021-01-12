@@ -27,5 +27,9 @@ export default {
         return state.statistichekm;
     },
 
+    load(state) {
+        return state.load;
+    },
+
 
 };

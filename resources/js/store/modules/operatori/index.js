@@ -12,7 +12,8 @@ export default {
             statistiche: [],
             settimane: [],
             totore: '',
-            operatore: ''
+            operatore: '',
+            load: false
         };
     },
     mutations,

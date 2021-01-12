@@ -38,5 +38,9 @@ export default {
         state.statistiche = [];
         state.totore = '';
         state.operatore = ''
-    }
+    },
+
+    load(state, payload){
+        state.load = payload;
+    },
 };

@@ -19,7 +19,7 @@
                         pill
                 >
                     <v-avatar left>
-                        <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
+                        <v-img :src="foto"></v-img>
                     </v-avatar>
                     {{ user }}
                 </v-chip>
@@ -58,6 +58,10 @@
                 return this.$store.getters['auth/user']
             },
 
+            foto(){
+                return '/img/' + this.$store.getters['auth/user_id'] + '.jpg';
+            },
+
             isLogged(){
                 return this.$store.getters['auth/isLogged']
             }
@@ -66,6 +70,7 @@
         methods:{
             logout(){
                 this.$store.dispatch('auth/logout')
+                this.$router.push('/')
             }
         }
     }

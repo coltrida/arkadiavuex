@@ -10,6 +10,7 @@ export default {
     inserisciassociazione(context, payload){
         axios.post(`${help().linkassociaattivitacliente}`, payload)
             .then(response => {
+                //console.log('dopo: '+ response.data[0])
                 context.commit('inserisciattivitacliente', response.data);
             })
     },

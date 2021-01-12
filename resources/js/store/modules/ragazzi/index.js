@@ -12,7 +12,8 @@ export default {
             statistichekm: [],
             costoTotale: '',
             kmTotale: '',
-            ragazzo: ''
+            ragazzo: '',
+            load: false
         };
     },
     mutations,

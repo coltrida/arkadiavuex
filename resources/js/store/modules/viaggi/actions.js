@@ -1,9 +1,11 @@
 import help from '../../../helps.ts'
 export default {
     loadviaggi(context){
+        context.commit('load', true)
         axios.get(`${help().linkchilometri}`)
             .then(response => {
                 context.commit('loadviaggi', response.data);
+                context.commit('load', false);
             })
     },
 

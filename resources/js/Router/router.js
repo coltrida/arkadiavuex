@@ -21,26 +21,27 @@ const StatKmragazzi = () => import('../pages/statistiche/chilometriragazzi/Index
 const StatKmvetture = () => import('../pages/statistiche/chilometrivetture/Index');
 const Statpresenzeoperatori = () => import('../pages/statistiche/presenzeoperatori/Index');
 const Statpresenzeragazzi = () => import('../pages/statistiche/presenzeragazzi/Index');
+import store from '../store/index'
 
 const routes = [
     { path: '/', component: HomePage },
     { path: '/login', component: Login },
     { path: '/register', component: Register },
-    { path: '/inserisciattivita', component: Attivita },
-    { path: '/inserisciragazzo', component: Ragazzo },
-    { path: '/inseriscivettura', component: Vettura },
-    { path: '/inseriscikm', component: Chilometri },
-    { path: '/presenzeoperatori', component: PresenzeOperatore },
-    { path: '/attivitaragazzi', component: PresenzeAttivita },
-    { path: '/associa', component: Associa },
-    { path: '/statistiche', component: Statistiche },
-    { path: '/associaattivitaragazzo', component: AssociaAttivitaRagazzo },
-    { path: '/associaoreoperatore', component: AssociaOperatoreOre },
-    { path: '/log', component: Log },
-    { path: '/statistichekmragazzi', component: StatKmragazzi },
-    { path: '/statistichekmvetture', component: StatKmvetture },
-    { path: '/statistichepresenzeoperatori', component: Statpresenzeoperatori },
-    { path: '/statistichepresenzeragazzi', component: Statpresenzeragazzi },
+    { path: '/inserisciattivita', component: Attivita, meta: { requiresAuth: true }},
+    { path: '/inserisciragazzo', component: Ragazzo, meta: { requiresAuth: true } },
+    { path: '/inseriscivettura', component: Vettura, meta: { requiresAuth: true } },
+    { path: '/inseriscikm', component: Chilometri, meta: { requiresAuth: true } },
+    { path: '/presenzeoperatori', component: PresenzeOperatore, meta: { requiresAuth: true } },
+    { path: '/attivitaragazzi', component: PresenzeAttivita, meta: { requiresAuth: true } },
+    { path: '/associa', component: Associa, meta: { requiresAuth: true } },
+    { path: '/statistiche', component: Statistiche, meta: { requiresAuth: true } },
+    { path: '/associaattivitaragazzo', component: AssociaAttivitaRagazzo, meta: { requiresAuth: true } },
+    { path: '/associaoreoperatore', component: AssociaOperatoreOre, meta: { requiresAuth: true } },
+    { path: '/log', component: Log, meta: { requiresAuth: true } },
+    { path: '/statistichekmragazzi', component: StatKmragazzi, meta: { requiresAuth: true } },
+    { path: '/statistichekmvetture', component: StatKmvetture, meta: { requiresAuth: true } },
+    { path: '/statistichepresenzeoperatori', component: Statpresenzeoperatori, meta: { requiresAuth: true } },
+    { path: '/statistichepresenzeragazzi', component: Statpresenzeragazzi, meta: { requiresAuth: true } },
     { path: '/:notFound(.*)', component: HomePage }
 ]
 
@@ -49,6 +50,24 @@ const router = new VueRouter({
     routes,
     hashbang: false,
     mode: 'history'
+})
+
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+        // this route requires auth, check if logged in
+        // if not, redirect to login page.
+        if (!store.getters['auth/isLogged']) {
+            next({
+                path: '/login',
+                query: { redirect: to.fullPath }
+            })
+        } else {
+            next()
+        }
+    } else {
+        next() // make sure to always call next()!
+    }
 })
 
 export default router

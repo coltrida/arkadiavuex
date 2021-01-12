@@ -1,9 +1,11 @@
 import help from '../../../helps.ts'
 export default {
     loadpresenze(context, payload){
+        context.commit('load', true)
         axios.get(`${help().linkpresenzeoperatore}/${payload}`)
             .then(response => {
                 context.commit('setPresenze', response.data);
+                context.commit('load', false)
             })
     },
 

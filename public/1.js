@@ -1,15 +1,47 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/operatoreore/Index.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/associa/operatoreore/Index.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ListaAssociazioni__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ListaAssociazioni */ "./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue");
+/* harmony import */ var _ListaAssociazioni__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ListaAssociazioni */ "./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -63,53 +95,84 @@ __webpack_require__.r(__webpack_exports__);
     ListaAssociazioni: _ListaAssociazioni__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   created: function created() {
-    this.loadOperatori();
+    this.loadAttivita();
+    this.loadRagazzi();
   },
   data: function data() {
+    var srcs = {
+      1: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+      2: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
+      3: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
+      4: 'https://cdn.vuetifyjs.com/images/lists/4.jpg',
+      5: 'https://cdn.vuetifyjs.com/images/lists/5.jpg'
+    };
     return {
+      autoUpdate: true,
+      menu2: false,
+      isUpdating: false,
       form: {
-        operatore: '',
-        ore: ''
-      }
+        attivita: '',
+        ragazzi: []
+      },
+      name: 'Midnight Crew',
+
+      /*people: [
+          { name: 'Sandra Adams', group: 'Group 1', avatar: srcs[1] },
+          { name: 'Ali Connors', group: 'Group 1', avatar: srcs[2] },
+          { name: 'Trevor Hansen', group: 'Group 1', avatar: srcs[3] },
+          { name: 'Tucker Smith', group: 'Group 1', avatar: srcs[2] },
+          { name: 'Britta Holt', group: 'Group 2', avatar: srcs[4] },
+          { name: 'Jane Smith ', group: 'Group 2', avatar: srcs[5] },
+          { name: 'John Smith', group: 'Group 2', avatar: srcs[1] },
+          { name: 'Sandra Williams', group: 'Group 2', avatar: srcs[3] },
+      ],*/
+      title: 'The summer breeze'
     };
   },
   computed: {
     canSend: function canSend() {
-      return !(this.form.operatore && this.form.ore);
+      return !(this.form.attivita && this.form.ragazzi.length);
     },
-    listaoperatori: function listaoperatori() {
-      return this.$store.getters['operatori/operatori'];
+    listaattivita: function listaattivita() {
+      return this.$store.getters['attivita/attivita'];
+    },
+    people: function people() {
+      return this.$store.getters['ragazzi/ragazzi'];
     }
   },
   methods: {
     inserisci: function inserisci() {
       var _this = this;
 
-      this.$store.dispatch('operatori/inseriscioresettimanali', this.form).then(function () {
-        _this.form.operatore = '';
-        _this.form.ore = '';
+      this.$store.dispatch('associa/inserisciassociazione', this.form).then(function () {
+        _this.form.attivita = '';
+        _this.form.ragazzi = [];
       });
     },
-    loadOperatori: function loadOperatori() {
-      this.$store.dispatch('operatori/loadoperatori');
+    loadAttivita: function loadAttivita() {
+      this.$store.dispatch('attivita/loadattivita');
+    },
+    loadRagazzi: function loadRagazzi() {
+      this.$store.dispatch('ragazzi/loadragazzi');
+    },
+    remove: function remove(item) {
+      var index = this.form.ragazzi.indexOf(item.id);
+      if (index >= 0) this.form.ragazzi.splice(index, 1);
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
 //
 //
 //
@@ -151,13 +214,13 @@ __webpack_require__.r(__webpack_exports__);
     this.loadAssociazioni();
   },
   computed: {
-    operatori: function operatori() {
-      return this.$store.getters['operatori/operatori'];
+    associazioni: function associazioni() {
+      return this.$store.getters['associa/associazioni'];
     }
   },
   methods: {
     loadAssociazioni: function loadAssociazioni() {
-      this.$store.dispatch('operatori/loadoperatori');
+      this.$store.dispatch('associa/loadassociazioni');
     },
     delAssociazione: function delAssociazione(id, indice) {
       this.$store.dispatch('associa/eliminaassociazione', {
@@ -170,10 +233,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/operatoreore/Index.vue?vue&type=template&id=918dcaa2&scoped=true&":
-/*!************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/associa/operatoreore/Index.vue?vue&type=template&id=918dcaa2&scoped=true& ***!
-  \************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=template&id=876dfeb4&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=template&id=876dfeb4&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -195,7 +258,7 @@ var render = function() {
         },
         [
           _c("h3", { staticStyle: { color: "white" } }, [
-            _vm._v("Associa Operatore - Ore Settimanali")
+            _vm._v("Associa Attività - Ragazzo")
           ]),
           _vm._v(" "),
           _c(
@@ -230,35 +293,111 @@ var render = function() {
         [
           _c("v-select", {
             attrs: {
-              items: _vm.listaoperatori,
+              items: _vm.listaattivita,
               "item-text": "name",
               "item-value": "id",
-              label: "Operatori",
+              label: "Attività",
               dark: ""
             },
             model: {
-              value: _vm.form.operatore,
+              value: _vm.form.attivita,
               callback: function($$v) {
-                _vm.$set(_vm.form, "operatore", $$v)
+                _vm.$set(_vm.form, "attivita", $$v)
               },
-              expression: "form.operatore"
+              expression: "form.attivita"
             }
           }),
           _vm._v(" "),
-          _c("v-text-field", {
+          _c("v-autocomplete", {
             attrs: {
-              label: "Ore",
-              type: "number",
-              step: "0.5",
-              required: "",
-              dark: ""
+              disabled: _vm.isUpdating,
+              items: _vm.people,
+              filled: "",
+              chips: "",
+              color: "blue-grey lighten-2",
+              label: "Ragazzi",
+              "item-text": "name",
+              "item-value": "id",
+              multiple: ""
             },
-            model: {
-              value: _vm.form.ore,
-              callback: function($$v) {
-                _vm.$set(_vm.form, "ore", $$v)
+            scopedSlots: _vm._u([
+              {
+                key: "selection",
+                fn: function(data) {
+                  return [
+                    _c(
+                      "v-chip",
+                      _vm._b(
+                        {
+                          attrs: { "input-value": data.selected, close: "" },
+                          on: {
+                            click: data.select,
+                            "click:close": function($event) {
+                              return _vm.remove(data.item)
+                            }
+                          }
+                        },
+                        "v-chip",
+                        data.attrs,
+                        false
+                      ),
+                      [
+                        _c(
+                          "v-avatar",
+                          { attrs: { left: "" } },
+                          [_c("v-img", { attrs: { src: data.item.avatar } })],
+                          1
+                        ),
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(data.item.name) +
+                            "\n                "
+                        )
+                      ],
+                      1
+                    )
+                  ]
+                }
               },
-              expression: "form.ore"
+              {
+                key: "item",
+                fn: function(data) {
+                  return [
+                    typeof data.item !== "object"
+                      ? [
+                          _c("v-list-item-content", {
+                            domProps: { textContent: _vm._s(data.item) }
+                          })
+                        ]
+                      : [
+                          _c("v-list-item-avatar", [
+                            _c("img", { attrs: { src: data.item.avatar } })
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "v-list-item-content",
+                            [
+                              _c("v-list-item-title", {
+                                domProps: { innerHTML: _vm._s(data.item.name) }
+                              }),
+                              _vm._v(" "),
+                              _c("v-list-item-subtitle", {
+                                domProps: { innerHTML: _vm._s(data.item.group) }
+                              })
+                            ],
+                            1
+                          )
+                        ]
+                  ]
+                }
+              }
+            ]),
+            model: {
+              value: _vm.form.ragazzi,
+              callback: function($$v) {
+                _vm.$set(_vm.form, "ragazzi", $$v)
+              },
+              expression: "form.ragazzi"
             }
           }),
           _vm._v(" "),
@@ -285,10 +424,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=template&id=779c91e4&scoped=true&":
-/*!************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=template&id=779c91e4&scoped=true& ***!
-  \************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=template&id=00053af6&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=template&id=00053af6&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -301,39 +440,46 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("v-simple-table", {
-    attrs: { dark: "" },
+    attrs: { dark: "", "fixed-header": "", height: "300px" },
     scopedSlots: _vm._u([
       {
         key: "default",
         fn: function() {
           return [
             _c("thead", [
-              _c("tr", { staticStyle: { "background-color": "#2e4623" } }, [
-                _c("th", { staticClass: "text-left" }, [
-                  _vm._v("\n                Nome\n            ")
-                ]),
+              _c("tr", [
+                _c(
+                  "th",
+                  {
+                    staticClass: "text-left",
+                    staticStyle: { "background-color": "#2e4623" }
+                  },
+                  [_vm._v("\n                Attivita'\n            ")]
+                ),
                 _vm._v(" "),
-                _c("th", { staticClass: "text-left" }, [
-                  _vm._v("\n                Ore Settimanali\n            ")
-                ]),
+                _c(
+                  "th",
+                  {
+                    staticClass: "text-left",
+                    staticStyle: { "background-color": "#2e4623" }
+                  },
+                  [_vm._v("\n                Ragazzo\n            ")]
+                ),
                 _vm._v(" "),
-                _c("th", { staticClass: "text-left" }, [
-                  _vm._v("\n                Ore Saldo\n            ")
-                ]),
-                _vm._v(" "),
-                _c("th", { staticClass: "text-left" })
+                _c("th", {
+                  staticClass: "text-left",
+                  staticStyle: { "background-color": "#2e4623" }
+                })
               ])
             ]),
             _vm._v(" "),
             _c(
               "tbody",
-              _vm._l(_vm.operatori, function(item, index) {
+              _vm._l(_vm.associazioni, function(item, index) {
                 return _c("tr", { key: item.id }, [
-                  _c("td", [_vm._v(_vm._s(item.name))]),
+                  _c("td", [_vm._v(_vm._s(item.attivita))]),
                   _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(item.oresettimanali))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(item.oresaldo))]),
+                  _c("td", [_vm._v(_vm._s(item.ragazzo))]),
                   _vm._v(" "),
                   _c(
                     "td",
@@ -372,17 +518,17 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/pages/associa/operatoreore/Index.vue":
-/*!***********************************************************!*\
-  !*** ./resources/js/pages/associa/operatoreore/Index.vue ***!
-  \***********************************************************/
+/***/ "./resources/js/pages/associa/attivitaragazzo/Index.vue":
+/*!**************************************************************!*\
+  !*** ./resources/js/pages/associa/attivitaragazzo/Index.vue ***!
+  \**************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Index_vue_vue_type_template_id_918dcaa2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=918dcaa2&scoped=true& */ "./resources/js/pages/associa/operatoreore/Index.vue?vue&type=template&id=918dcaa2&scoped=true&");
-/* harmony import */ var _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js& */ "./resources/js/pages/associa/operatoreore/Index.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Index_vue_vue_type_template_id_876dfeb4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=876dfeb4&scoped=true& */ "./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=template&id=876dfeb4&scoped=true&");
+/* harmony import */ var _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js& */ "./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -393,65 +539,65 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Index_vue_vue_type_template_id_918dcaa2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Index_vue_vue_type_template_id_918dcaa2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Index_vue_vue_type_template_id_876dfeb4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Index_vue_vue_type_template_id_876dfeb4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "918dcaa2",
+  "876dfeb4",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/pages/associa/operatoreore/Index.vue"
+component.options.__file = "resources/js/pages/associa/attivitaragazzo/Index.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/pages/associa/operatoreore/Index.vue?vue&type=script&lang=js&":
-/*!************************************************************************************!*\
-  !*** ./resources/js/pages/associa/operatoreore/Index.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************/
+/***/ "./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/operatoreore/Index.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/pages/associa/operatoreore/Index.vue?vue&type=template&id=918dcaa2&scoped=true&":
-/*!******************************************************************************************************!*\
-  !*** ./resources/js/pages/associa/operatoreore/Index.vue?vue&type=template&id=918dcaa2&scoped=true& ***!
-  \******************************************************************************************************/
+/***/ "./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=template&id=876dfeb4&scoped=true&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=template&id=876dfeb4&scoped=true& ***!
+  \*********************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_918dcaa2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=template&id=918dcaa2&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/operatoreore/Index.vue?vue&type=template&id=918dcaa2&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_918dcaa2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_876dfeb4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=template&id=876dfeb4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/attivitaragazzo/Index.vue?vue&type=template&id=876dfeb4&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_876dfeb4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_918dcaa2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_876dfeb4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue":
-/*!***********************************************************************!*\
-  !*** ./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue ***!
-  \***********************************************************************/
+/***/ "./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue":
+/*!**************************************************************************!*\
+  !*** ./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue ***!
+  \**************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ListaAssociazioni_vue_vue_type_template_id_779c91e4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ListaAssociazioni.vue?vue&type=template&id=779c91e4&scoped=true& */ "./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=template&id=779c91e4&scoped=true&");
-/* harmony import */ var _ListaAssociazioni_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ListaAssociazioni.vue?vue&type=script&lang=js& */ "./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ListaAssociazioni_vue_vue_type_template_id_00053af6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ListaAssociazioni.vue?vue&type=template&id=00053af6&scoped=true& */ "./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=template&id=00053af6&scoped=true&");
+/* harmony import */ var _ListaAssociazioni_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ListaAssociazioni.vue?vue&type=script&lang=js& */ "./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -462,49 +608,49 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _ListaAssociazioni_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ListaAssociazioni_vue_vue_type_template_id_779c91e4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ListaAssociazioni_vue_vue_type_template_id_779c91e4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _ListaAssociazioni_vue_vue_type_template_id_00053af6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ListaAssociazioni_vue_vue_type_template_id_00053af6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "779c91e4",
+  "00053af6",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/pages/associa/operatoreore/ListaAssociazioni.vue"
+component.options.__file = "resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************!*\
-  !*** ./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************/
+/***/ "./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ListaAssociazioni_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ListaAssociazioni.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ListaAssociazioni_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ListaAssociazioni.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ListaAssociazioni_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=template&id=779c91e4&scoped=true&":
-/*!******************************************************************************************************************!*\
-  !*** ./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=template&id=779c91e4&scoped=true& ***!
-  \******************************************************************************************************************/
+/***/ "./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=template&id=00053af6&scoped=true&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=template&id=00053af6&scoped=true& ***!
+  \*********************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListaAssociazioni_vue_vue_type_template_id_779c91e4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ListaAssociazioni.vue?vue&type=template&id=779c91e4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/operatoreore/ListaAssociazioni.vue?vue&type=template&id=779c91e4&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListaAssociazioni_vue_vue_type_template_id_779c91e4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListaAssociazioni_vue_vue_type_template_id_00053af6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./ListaAssociazioni.vue?vue&type=template&id=00053af6&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/associa/attivitaragazzo/ListaAssociazioni.vue?vue&type=template&id=00053af6&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListaAssociazioni_vue_vue_type_template_id_00053af6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListaAssociazioni_vue_vue_type_template_id_779c91e4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListaAssociazioni_vue_vue_type_template_id_00053af6_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

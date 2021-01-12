@@ -5,7 +5,7 @@ export default {
 
     inserisciattivitacliente(state, payload){
         payload.forEach(element => {
-            let ele = {id: element.id, activity_id: element.activity_id, client_id: element.client_id}
+            let ele = {id: element.id, attivita: element.attivita, ragazzo: element.ragazzo}
             state.attivitaragazzi.unshift(ele)
         })
 
